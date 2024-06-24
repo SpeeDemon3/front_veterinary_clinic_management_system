@@ -4,12 +4,13 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import { UserResponse } from '../../interfaces/user-response';
 import { UserService } from '../../services/user-service';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-find-all-users',
   standalone: true,
-  imports: [MatCardModule, MatTableModule],
+  imports: [MatCardModule, MatTableModule, CommonModule],
   templateUrl: './find-all-users.component.html',
   styleUrl: './find-all-users.component.css'
 })
