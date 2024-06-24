@@ -1,0 +1,5 @@
+<div class="image-uploader">
+    <label for="file-input">Choose Image (PNG)</label>
+    <input id="file-input" type="file" (change)="onSelectImage($event)" accept="image/png">
+    <img *ngIf="image?.dataUrlImg" [src]="image.dataUrlImg" alt="Uploaded Image">
+</div>

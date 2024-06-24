@@ -39,7 +39,7 @@ export class LoginComponent {
 
     this.accessService.login(object).subscribe({
       next:(data) => {
-        if (data.token !== null) {
+        if (data.token) {
           localStorage.setItem('token', data.token);
           console.log(data);
           this.router.navigate(['/home']);
@@ -48,7 +48,8 @@ export class LoginComponent {
         }
     },
     error(err) {
-        console.log(err.message);
+        console.log('Login error: ', err.message);
+        alert("Incorrect credentials.");
     },
     })
   }
