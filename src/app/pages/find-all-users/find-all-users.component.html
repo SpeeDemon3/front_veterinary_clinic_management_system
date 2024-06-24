@@ -1,1 +1,60 @@
-<p>find-all-users works!</p>
+<div class="card-container">
+    <mat-card>
+
+        <mat-card-header>
+            <mat-card-title>Users List</mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+
+            <table mat-table [dataSource]="userList" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef> Id </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="email">
+                  <th mat-header-cell *matHeaderCellDef> Email </th>
+                  <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="dni">
+                  <th mat-header-cell *matHeaderCellDef> DNI </th>
+                  <td mat-cell *matCellDef="let element"> {{element.dni}} </td>
+                </ng-container>
+                
+                <ng-container matColumnDef="phoneNumber">
+                    <th mat-header-cell *matHeaderCellDef> Phone Number </th>
+                    <td mat-cell *matCellDef="let element"> {{element.phoneNumber}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="img">
+                    <th mat-header-cell *matHeaderCellDef> Profile Photo </th>
+                    <td mat-cell *matCellDef="let element"> {{element.img}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="birthdate">
+                    <th mat-header-cell *matHeaderCellDef> Birthdate </th>
+                    <td mat-cell *matCellDef="let element"> {{element.birthdate}} </td>
+                  </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              
+              
+
+        </mat-card-content>
+
+    </mat-card>
+</div>

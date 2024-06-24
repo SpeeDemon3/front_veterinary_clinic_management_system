@@ -25,8 +25,6 @@ export class AccessService {
     return this.http.post<ResponseAccess>(`${this.UrlBase}/user/login`, object);
   }
 
-  findAll() : Observable<UserResponse> {
-    return this.http.get<UserResponse>(`${this.UrlBase}/user/findAll`);
-  }
+
 
 }

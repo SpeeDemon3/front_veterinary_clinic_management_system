@@ -2,6 +2,7 @@ import { PetResponse } from "./pet-response";
 import { RoleResponse } from "./role-response";
 
 export interface UserResponse {
+    value: UserResponse[];
     id : number;
     name : string;
     email : string;
