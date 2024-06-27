@@ -1,0 +1,13 @@
+button[mat-button]:first-of-type {
+  background-color: rgba(0, 0, 0, 0.524); /* Cambia a tu color preferido */
+  color: #fff; /* Cambia el color del texto si es necesario */
+  border: solid 1px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 25px;
+  margin-top: 10px;
+}
+
+button[mat-menu-item] {
+  color: rgb(87, 102, 197);
+}
+

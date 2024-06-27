@@ -1,0 +1,15 @@
+header {
+  text-align: center;
+}
+
+header img {
+  width: 15%;
+  height: 15%;
+  border-radius: 30%;
+}
+
+h1 {
+  color: rgba(14, 131, 233, 0.825);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.300);
+  letter-spacing: 5px;
+}

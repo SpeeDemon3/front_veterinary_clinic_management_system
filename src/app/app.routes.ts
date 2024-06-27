@@ -4,23 +4,28 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FindAllUsersComponent } from './pages/find-all-users/find-all-users.component';
 import { authGuard } from './custom/auth.guard';
+import { HomeAppComponent } from './pages/home-app/home-app.component';
 
 export const routes: Routes = [
     {
         path:"",
-        component:LoginComponent
+        component: LoginComponent
     },
     {
         path:"signup",
-        component:SignUpComponent
+        component: SignUpComponent
     },
     {
         path:"home",
-        component:HomeComponent,
+        component: HomeComponent,
         canActivate:[authGuard]
     },
     {
         path: "findAllUsers",
         component: FindAllUsersComponent
+    },
+    {
+        path: "homeApp",
+        component: HomeAppComponent
     }
 ];
