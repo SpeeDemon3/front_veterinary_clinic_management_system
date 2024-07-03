@@ -5,27 +5,47 @@ import { HomeComponent } from './pages/home/home.component';
 import { FindAllUsersComponent } from './pages/find-all-users/find-all-users.component';
 import { authGuard } from './custom/auth.guard';
 import { HomeAppComponent } from './pages/home-app/home-app.component';
+import { AdministratorManagementComponent } from './pages/administrator-management/administrator-management.component';
+import { UserManagementComponent } from './pages/user-management/user-management.component';
+import { RoleManagementComponent } from './pages/role-management/role-management.component';
+import { FindUserByIDComponent } from './pages/find-user-by-id/find-user-by-id.component';
 
 export const routes: Routes = [
     {
-        path:"",
-        component: LoginComponent
+      path:"",
+      component: LoginComponent
     },
     {
-        path:"signup",
-        component: SignUpComponent
+      path:"signup",
+      component: SignUpComponent
     },
     {
-        path:"home",
-        component: HomeComponent,
-        canActivate:[authGuard]
+      path:"home",
+      component: HomeComponent,
+      canActivate:[authGuard]
     },
     {
-        path: "findAllUsers",
-        component: FindAllUsersComponent
+      path: "findAllUsers",
+      component: FindAllUsersComponent
     },
     {
-        path: "homeApp",
-        component: HomeAppComponent
+      path: "homeApp",
+      component: HomeAppComponent
+    },
+    {
+      path: "adminManagement",
+      component: AdministratorManagementComponent
+    },
+    {
+      path: "userManagement",
+      component: UserManagementComponent
+    },
+    {
+      path: "roleManagement",
+      component: RoleManagementComponent
+    },
+    {
+      path: "findUserById",
+      component: FindUserByIDComponent
     }
 ];

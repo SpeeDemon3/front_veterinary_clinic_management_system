@@ -11,3 +11,48 @@ button[mat-menu-item] {
   color: rgb(87, 102, 197);
 }
 
+/* Menu 2 */
+
+.custom-management-button {
+  background-color: #2196F3; /* Color de fondo */
+  color: white; /* Color del texto */
+  font-weight: bold; /* Texto en negrita */
+  padding: 10px 20px; /* Relleno alrededor del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+}
+
+.custom-management-button:hover {
+  background-color: #1976D2; /* Color de fondo al pasar el ratón */
+}
+
+.custom-management-button:active {
+  background-color: #0D47A1; /* Color de fondo al hacer clic */
+}
+
+/* Estilo para el menú en general */
+.custom-mat-menu .mat-menu-content {
+  background-color: #f0f0f0; /* Color de fondo del menú */
+  border: 1px solid #ccc; /* Borde del menú */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo para los elementos del menú */
+.custom-mat-menu .mat-menu-item {
+  color: #333; /* Color del texto */
+  padding: 10px 20px; /* Relleno */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilo para los elementos del menú al pasar el ratón */
+.custom-mat-menu .mat-menu-item:hover {
+  background-color: #e0e0e0; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo para los elementos del menú activos */
+.custom-mat-menu .mat-menu-item.mat-menu-item-active {
+  background-color: #d0d0d0; /* Color de fondo del elemento activo */
+  font-weight: bold; /* Texto en negrita */
+}

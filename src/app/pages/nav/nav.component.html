@@ -1,5 +1,101 @@
+<!--Primer menu con evento click-->
 <button mat-button [matMenuTriggerFor]="menu">Management</button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
+  <button mat-menu-item>Owner Management</button>
+  <button mat-menu-item>Pet Management</button>
+  <button mat-menu-item>Invoice</button>
+  <button mat-menu-item>Appointment </button>
+  <button mat-menu-item (click)="navigateToAdminManagement()">Administrator Management</button>
 </mat-menu>
+
+<!--Menu animado-->
+
+<button mat-button [matMenuTriggerFor]="clinic" class="custom-management-button">Management</button>
+<mat-menu #clinic="matMenu" class="custom-mat-menu">
+  <button mat-menu-item [matMenuTriggerFor]="owner">Owner Management</button>
+  <button mat-menu-item [matMenuTriggerFor]="pet">Pet Management</button>
+  <button mat-menu-item [matMenuTriggerFor]="invoice">Invoice Management</button>
+  <button mat-menu-item [matMenuTriggerFor]="appointment">Appointment Management</button>
+  <button mat-menu-item [matMenuTriggerFor]="admin">Administrator Management</button>
+</mat-menu>
+
+<mat-menu #owner="matMenu" class="custom-mat-menu">
+  <button mat-menu-item>Add New Owner</button>
+  <button mat-menu-item>Find Owner By Email</button>
+  <button mat-menu-item>Find Owner By DNI</button>
+  <button mat-menu-item>Find Owner By Id</button>
+  <button mat-menu-item>Find All Owners</button>
+  <button mat-menu-item>Delete Owner By Id</button>
+  <button mat-menu-item>Update Owner By Id</button>
+  <button mat-menu-item>Download Info Owners File Csv</button>
+  <button mat-menu-item>Download Info Owners File Json</button>
+</mat-menu>
+
+<mat-menu #admin="matMenu" class="custom-mat-menu">
+  <button mat-menu-item [matMenuTriggerFor]="user">Users Management</button>
+  <button mat-menu-item [matMenuTriggerFor]="role">Role Management</button>
+</mat-menu>
+
+
+<mat-menu #user="matMenu" class="custom-mat-menu">
+  <button mat-menu-item (click)="navigateToFindUserById()">Find User By Id</button>
+  <button mat-menu-item>Find User By DNI</button>
+  <button mat-menu-item>Find All Users</button>
+  <button mat-menu-item>Update User By Id</button>
+  <button mat-menu-item>Delete User By Id</button>
+  <button mat-menu-item>Add Image To User</button>
+  <button mat-menu-item>Show User Image</button>
+  <button mat-menu-item>Download File Csv Users</button>
+  <button mat-menu-item>Download File Json Users</button>
+  <button mat-menu-item>Update User Role</button>
+</mat-menu>
+
+
+<mat-menu #pet="matMenu" class="custom-mat-menu">
+  <button mat-menu-item>Create New Pet</button>
+  <button mat-menu-item>Find Pet By Id</button>
+  <button mat-menu-item>Find All Pets</button>
+  <button mat-menu-item>Delete Pet By Id</button>
+  <button mat-menu-item>Update Pet By Id</button>
+  <button mat-menu-item>Add Image To Pet</button>
+  <button mat-menu-item>Show Pet Image</button>
+  <button mat-menu-item>Download File Csv Pets</button>
+  <button mat-menu-item>Download File Json Pets</button>
+  <button mat-menu-item>Find Pet By Code</button>
+</mat-menu>
+
+<mat-menu #invoice="matMenu" class="custom-mat-menu">
+  <button mat-menu-item>Create New Invoice</button>
+  <button mat-menu-item>Find Invoice By Id</button>
+  <button mat-menu-item>Find Invoice By Client DNI</button>
+  <button mat-menu-item>Find Invoice By State</button>
+  <button mat-menu-item>Find All Invoices</button>
+  <button mat-menu-item>Delete Invoice By Id</button>
+  <button mat-menu-item>Update Invoice By Id</button>
+  <button mat-menu-item>Download File Csv Invoices</button>
+  <button mat-menu-item>Download File Json Invoices</button>
+</mat-menu>
+
+<mat-menu #appointment="matMenu" class="custom-mat-menu">
+  <button mat-menu-item>Create New Appointment</button>
+  <button mat-menu-item>Find Appointment By Id</button>
+  <button mat-menu-item>Find Appointment By Pet Id</button>
+  <button mat-menu-item>Find Appointment By Veterinarian Id</button>
+  <button mat-menu-item>Find Appointments By Date</button>
+  <button mat-menu-item>Find All Appointments</button>
+  <button mat-menu-item>Delete Appointment By Id</button>
+  <button mat-menu-item>Update Appointment By Id</button>
+  <button mat-menu-item>Download File Csv Appointment</button>
+  <button mat-menu-item>Download File Json Appointment</button>
+</mat-menu>
+
+<mat-menu #role="matMenu">
+  <button mat-menu-item>Create Role</button>
+  <button mat-menu-item>Find Role By Id</button>
+  <button mat-menu-item>Find All Roles</button>
+  <button mat-menu-item>Find All Roles By Name Role</button>
+  <button mat-menu-item>Update Role By Id</button>
+  <button mat-menu-item>Delete Role By Id</button>
+</mat-menu>
+
+
