@@ -17,7 +17,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 export class FindUserByIDComponent {
 
   private userService = inject(UserService)
-  // user : UserResponse | undefined;
   public displayedColumns: string[] = ['id', 'name', 'email', 'dni', 'phoneNumber', 'birthdate', 'img'];
   public dataSource = new MatTableDataSource<UserResponse>();
 

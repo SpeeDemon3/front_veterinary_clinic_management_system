@@ -22,6 +22,10 @@ navigateToFindUserById() {
   this.router.navigate(['/findUserById']);
 }
 
+navigateToFindUserByDni() {
+  this.router.navigate(['/findUserByDni']);
+}
+
 navigateToFindAll() {
   this.router.navigate(['/findAll']);
 }

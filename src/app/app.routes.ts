@@ -9,6 +9,7 @@ import { AdministratorManagementComponent } from './pages/administrator-manageme
 import { UserManagementComponent } from './pages/user-management/user-management.component';
 import { RoleManagementComponent } from './pages/role-management/role-management.component';
 import { FindUserByIDComponent } from './pages/find-user-by-id/find-user-by-id.component';
+import { FindUserByDniComponent } from './pages/find-user-by-dni/find-user-by-dni.component';
 
 export const routes: Routes = [
     {
@@ -48,5 +49,8 @@ export const routes: Routes = [
     {
       path: "findUserById",
       component: FindUserByIDComponent
+    }, {
+      path: "findUserByDni",
+      component: FindUserByDniComponent
     }
 ];
