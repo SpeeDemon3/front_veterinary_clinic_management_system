@@ -42,7 +42,7 @@ export class LoginComponent {
         if (data.token) {
           localStorage.setItem('token', data.token);
           console.log(data);
-          this.router.navigate(['/home']);
+          this.router.navigate(['/homeApp']);
         } else {
           alert("Incorrect credentials.");
         }

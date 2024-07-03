@@ -22,6 +22,10 @@ navigateToFindUserById() {
   this.router.navigate(['/findUserById']);
 }
 
+navigateToFindAll() {
+  this.router.navigate(['/findAll']);
+}
+
 // Funcion para que cuando se hace click en un button me lleve a otro lugar
 navigateToAdminManagement() {
   this.router.navigate(['/adminManagement'])

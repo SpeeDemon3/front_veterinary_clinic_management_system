@@ -17,7 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 export class FindUserByIDComponent {
 
   private userService = inject(UserService)
-  user : UserResponse | undefined;
+  // user : UserResponse | undefined;
   public displayedColumns: string[] = ['id', 'name', 'email', 'dni', 'phoneNumber', 'birthdate', 'img'];
   public dataSource = new MatTableDataSource<UserResponse>();
 
@@ -25,20 +25,28 @@ export class FindUserByIDComponent {
 
   }
 
-  findUserById(id : number) {
-    this.userService.findUserById(id).subscribe({
-      next:(data : UserResponse) => {
-        if (data.id > 0) {
-          this.dataSource.data = [data];
-        } else {
-          console.error("User not found!!!");
+  findUserById(idString: string) {
+    const id = parseInt(idString);
+    console.log(id);
+    if (!isNaN(id) && id > 0) {
+      this.userService.findUserById(id).subscribe({
+        next: (data: UserResponse) => {
+          if (data) {
+            this.dataSource.data = [data];
+          } else {
+            console.error("User not found!!!");
+            this.dataSource.data = []; // Limpiar los datos de la tabla si no se encontró ningún usuario
+          }
+        },
+        error: (err: any) => {
+          console.error("Error finding user: ", err);
+          this.dataSource.data = []; // Limpiar los datos de la tabla en caso de error
         }
-      },
-      error: (err : any) => {
-        console.error("User not found: ", err)
-        this.dataSource.data = []; // Clear the table data if there's an error
-      }
-    })
+      });
+    } else {
+      console.error("Invalid user ID.");
+      this.dataSource.data = []; // Limpiar los datos de la tabla si el ID no es válido
+    }
   }
 
 

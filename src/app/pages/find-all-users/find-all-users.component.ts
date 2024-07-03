@@ -14,8 +14,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './find-all-users.component.html',
   styleUrl: './find-all-users.component.css'
 })
-export class FindAllUsersComponent {
 
+export class FindAllUsersComponent {
 
   private userService = inject(UserService);
   public userList : UserResponse[] = [];

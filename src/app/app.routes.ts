@@ -30,7 +30,8 @@ export const routes: Routes = [
     },
     {
       path: "homeApp",
-      component: HomeAppComponent
+      component: HomeAppComponent,
+      canActivate:[authGuard]
     },
     {
       path: "adminManagement",
