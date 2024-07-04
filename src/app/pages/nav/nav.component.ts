@@ -38,6 +38,10 @@ navigateToFindAllRoles() {
   this.router.navigate(['/findAllRoles']);
 }
 
+navigateToFindAllPets() {
+  this.router.navigate(['/findAllPets']);
+}
+
 
 
 }

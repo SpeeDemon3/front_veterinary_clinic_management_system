@@ -9,6 +9,7 @@ import { FindUserByIDComponent } from './pages/find-user-by-id/find-user-by-id.c
 import { FindUserByDniComponent } from './pages/find-user-by-dni/find-user-by-dni.component';
 import { FindRoleByIdComponent } from './pages/find-role-by-id/find-role-by-id.component';
 import { FindAllRolesComponent } from './pages/find-all-roles/find-all-roles.component';
+import { FindAllPetsComponent } from './pages/find-all-pets/find-all-pets.component';
 
 export const routes: Routes = [
     {
@@ -47,5 +48,9 @@ export const routes: Routes = [
     {
       path : "findAllRoles", 
       component: FindAllRolesComponent
+    },
+    {
+      path: "findAllPets",
+      component: FindAllPetsComponent
     }
 ];

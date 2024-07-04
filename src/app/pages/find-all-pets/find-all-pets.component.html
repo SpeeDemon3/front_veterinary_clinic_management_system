@@ -1,0 +1,64 @@
+<div class="card-container">
+    <mat-card>
+
+        <mat-card-header>
+            <mat-card-title>Pet List</mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+
+            <table mat-table [dataSource]="petList" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="identificationCode">
+                  <th mat-header-cell *matHeaderCellDef> Identification Code </th>
+                  <td mat-cell *matCellDef="let element"> {{element.identificationCode}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="description">
+                  <th mat-header-cell *matHeaderCellDef> Description </th>
+                  <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="vaccinationData">
+                  <th mat-header-cell *matHeaderCellDef> Vaccination Data </th>
+                  <td mat-cell *matCellDef="let element"> {{element.vaccinationData}} </td>
+                </ng-container>
+                
+                <ng-container matColumnDef="medication">
+                    <th mat-header-cell *matHeaderCellDef> Medication </th>
+                    <td mat-cell *matCellDef="let element"> {{element.medication}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="birthdate">
+                    <th mat-header-cell *matHeaderCellDef> Birthdate </th>
+                    <td mat-cell *matCellDef="let element"> {{element.birthdate}} </td>
+                  </ng-container>
+
+                <ng-container matColumnDef="img">
+                    <th mat-header-cell *matHeaderCellDef> Profile Photo </th>
+                    <td mat-cell *matCellDef="let element">
+                        <ng-container *ngIf="element.img">
+                            <img [src]="element.img" alt="Profile Photo" style="max-width: 80px; max-height: 80px; border-radius: 50%;">
+                        </ng-container>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              
+              
+
+        </mat-card-content>
+
+    </mat-card>
+</div>
