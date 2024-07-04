@@ -5,10 +5,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { FindAllUsersComponent } from './pages/find-all-users/find-all-users.component';
 import { authGuard } from './custom/auth.guard';
 import { HomeAppComponent } from './pages/home-app/home-app.component';
-import { UserManagementComponent } from './pages/user-management/user-management.component';
 import { FindUserByIDComponent } from './pages/find-user-by-id/find-user-by-id.component';
 import { FindUserByDniComponent } from './pages/find-user-by-dni/find-user-by-dni.component';
 import { FindRoleByIdComponent } from './pages/find-role-by-id/find-role-by-id.component';
+import { FindAllRolesComponent } from './pages/find-all-roles/find-all-roles.component';
 
 export const routes: Routes = [
     {
@@ -34,10 +34,6 @@ export const routes: Routes = [
       canActivate:[authGuard]
     },
     {
-      path: "userManagement",
-      component: UserManagementComponent
-    },
-    {
       path: "findUserById",
       component: FindUserByIDComponent
     }, {
@@ -47,5 +43,9 @@ export const routes: Routes = [
     {
       path: "findRoleById",
       component: FindRoleByIdComponent
+    },
+    {
+      path : "findAllRoles", 
+      component: FindAllRolesComponent
     }
 ];

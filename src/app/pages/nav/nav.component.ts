@@ -27,11 +27,15 @@ navigateToFindUserByDni() {
 }
 
 navigateToFindAllUser() {
-  this.router.navigate(['/findAll']);
+  this.router.navigate(['/findAllUsers']);
 }
 
 navigateToFindRoleById() {
   this.router.navigate(['/findRoleById']);
+}
+
+navigateToFindAllRoles() {
+  this.router.navigate(['/findAllRoles']);
 }
 
 
