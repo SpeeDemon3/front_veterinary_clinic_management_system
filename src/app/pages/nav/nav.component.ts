@@ -42,6 +42,10 @@ navigateToFindAllPets() {
   this.router.navigate(['/findAllPets']);
 }
 
+navigateToFindPetById() {
+  this.router.navigate(['/findPetById'])
+}
+
 
 
 }

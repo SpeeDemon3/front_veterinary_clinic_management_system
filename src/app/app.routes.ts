@@ -10,6 +10,7 @@ import { FindUserByDniComponent } from './pages/find-user-by-dni/find-user-by-dn
 import { FindRoleByIdComponent } from './pages/find-role-by-id/find-role-by-id.component';
 import { FindAllRolesComponent } from './pages/find-all-roles/find-all-roles.component';
 import { FindAllPetsComponent } from './pages/find-all-pets/find-all-pets.component';
+import { FindPetByIdComponent } from './pages/find-pet-by-id/find-pet-by-id.component';
 
 export const routes: Routes = [
     {
@@ -52,5 +53,9 @@ export const routes: Routes = [
     {
       path: "findAllPets",
       component: FindAllPetsComponent
+    },
+    {
+      path: "findPetById",
+      component: FindPetByIdComponent
     }
 ];
