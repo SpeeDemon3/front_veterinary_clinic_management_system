@@ -1,0 +1,21 @@
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensure elements stack vertically */
+  }
+  
+  .centered-container mat-form-field {
+    margin-bottom: 20px; /* Add some space between the form field and the table */
+  }
+  
+  .centered-container table {
+    width: auto; /* Adjust table width as needed */
+    max-width: 100%; /* Prevent table from exceeding the viewport width */
+  }
+  
+  .centered-container input {
+    background-color: aliceblue;
+    color: rgb(40, 40, 221);
+  }

@@ -11,9 +11,9 @@
 <mat-menu #owner="matMenu" class="custom-mat-menu">
   <button mat-menu-item>Add New Owner</button>
   <button mat-menu-item (click)="navigateToFindOwnerByEmail()">Find Owner By Email</button>
-  <button mat-menu-item>Find Owner By DNI</button>
+  <button mat-menu-item (click)="navigateToFindOwnerByDni()">Find Owner By DNI</button>
   <button mat-menu-item (click)="navigateToFindOwnerById()">Find Owner By Id</button>
-  <button mat-menu-item>Find All Owners</button>
+  <button mat-menu-item (click)="navigateFindAllOwners()">Find All Owners</button>
   <button mat-menu-item>Delete Owner By Id</button>
   <button mat-menu-item>Update Owner By Id</button>
   <button mat-menu-item>Download Info Owners File Csv</button>

@@ -5,14 +5,16 @@ import {MatTableModule} from '@angular/material/table';
 import { CommonModule } from '@angular/common';
 import { RoleServiceService } from '../../services/role-service.service';
 import { RoleResponse } from '../../interfaces/role-response';
+import { NavComponent } from "../nav/nav.component";
+import { HeaderComponent } from "../header/header.component";
 
 
 @Component({
-  selector: 'app-find-all-roles',
-  standalone: true,
-  imports: [MatCardModule, MatTableModule, CommonModule],
-  templateUrl: './find-all-roles.component.html',
-  styleUrl: './find-all-roles.component.css'
+    selector: 'app-find-all-roles',
+    standalone: true,
+    templateUrl: './find-all-roles.component.html',
+    styleUrl: './find-all-roles.component.css',
+    imports: [MatCardModule, MatTableModule, CommonModule, NavComponent, HeaderComponent]
 })
 export class FindAllRolesComponent {
 

@@ -5,14 +5,16 @@ import {MatTableModule} from '@angular/material/table';
 import { UserResponse } from '../../interfaces/user-response';
 import { UserService } from '../../services/user-service';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "../header/header.component";
+import { NavComponent } from "../nav/nav.component";
 
 
 @Component({
-  selector: 'app-find-all-users',
-  standalone: true,
-  imports: [MatCardModule, MatTableModule, CommonModule],
-  templateUrl: './find-all-users.component.html',
-  styleUrl: './find-all-users.component.css'
+    selector: 'app-find-all-users',
+    standalone: true,
+    templateUrl: './find-all-users.component.html',
+    styleUrl: './find-all-users.component.css',
+    imports: [MatCardModule, MatTableModule, CommonModule, HeaderComponent, NavComponent]
 })
 
 export class FindAllUsersComponent {

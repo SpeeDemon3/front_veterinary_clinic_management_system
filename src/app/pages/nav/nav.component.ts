@@ -58,6 +58,14 @@ navigateToFindOwnerByEmail() {
   this.router.navigate(['/findOwnerByEmail']);
 }
 
+navigateToFindOwnerByDni() {
+  this.router.navigate(['/findOwnerByDni']);
+}
+
+navigateFindAllOwners() {
+  this.router.navigate(['/findAllOwners']);
+}
+
 
 }
 

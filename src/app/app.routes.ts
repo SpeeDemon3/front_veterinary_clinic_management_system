@@ -14,6 +14,8 @@ import { FindPetByIdComponent } from './pages/find-pet-by-id/find-pet-by-id.comp
 import { FindPetByCodeComponent } from './pages/find-pet-by-code/find-pet-by-code.component';
 import { FindOwnerByIdComponent } from './pages/find-owner-by-id/find-owner-by-id.component';
 import { FindOwnerByEmailComponent } from './pages/find-owner-by-email/find-owner-by-email.component';
+import { FindOwnerByDniComponent } from './pages/find-owner-by-dni/find-owner-by-dni.component';
+import { FindAllOwnerComponent } from './pages/find-all-owner/find-all-owner.component';
 
 export const routes: Routes = [
     {
@@ -72,6 +74,14 @@ export const routes: Routes = [
     {
       path: "findOwnerByEmail",
       component: FindOwnerByEmailComponent
+    },
+    {
+      path: "findOwnerByDni",
+      component: FindOwnerByDniComponent
+    },
+    {
+      path: "findAllOwners",
+      component: FindAllOwnerComponent
     }
 
 
