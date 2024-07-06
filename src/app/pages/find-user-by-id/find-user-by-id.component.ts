@@ -20,9 +20,7 @@ export class FindUserByIDComponent {
   public displayedColumns: string[] = ['id', 'name', 'email', 'dni', 'phoneNumber', 'birthdate', 'img'];
   public dataSource = new MatTableDataSource<UserResponse>();
 
-  constructor() {
-
-  }
+  constructor() {}
 
   findUserById(idString: string) {
     const id = parseInt(idString);

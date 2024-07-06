@@ -15,7 +15,7 @@ export class OwnerService {
   constructor() { }
 
   findByEmail(email : string) : Observable<OwnerResponse> {
-    return this.http.get<OwnerResponse>(`${this.UrlBase}/user/findByEmail/${email}`);
+    return this.http.get<OwnerResponse>(`${this.UrlBase}/owner/findByEmail/${email}`);
   }
 
   findByDni(dni : string) : Observable<OwnerResponse> {

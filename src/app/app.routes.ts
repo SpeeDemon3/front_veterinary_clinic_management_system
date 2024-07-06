@@ -12,6 +12,8 @@ import { FindAllRolesComponent } from './pages/find-all-roles/find-all-roles.com
 import { FindAllPetsComponent } from './pages/find-all-pets/find-all-pets.component';
 import { FindPetByIdComponent } from './pages/find-pet-by-id/find-pet-by-id.component';
 import { FindPetByCodeComponent } from './pages/find-pet-by-code/find-pet-by-code.component';
+import { FindOwnerByIdComponent } from './pages/find-owner-by-id/find-owner-by-id.component';
+import { FindOwnerByEmailComponent } from './pages/find-owner-by-email/find-owner-by-email.component';
 
 export const routes: Routes = [
     {
@@ -62,6 +64,14 @@ export const routes: Routes = [
     {
       path: "findPetByCode",
       component: FindPetByCodeComponent
+    },
+    {
+      path: "findOwnerById",
+      component: FindOwnerByIdComponent
+    },
+    {
+      path: "findOwnerByEmail",
+      component: FindOwnerByEmailComponent
     }
 
 

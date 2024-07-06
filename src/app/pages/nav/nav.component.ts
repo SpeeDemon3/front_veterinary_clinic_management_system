@@ -50,6 +50,17 @@ navigateToFindPetByCode() {
   this.router.navigate(['/findPetByCode']);
 }
 
+navigateToFindOwnerById() {
+  this.router.navigate(['/findOwnerById']);
+}
+
+navigateToFindOwnerByEmail() {
+  this.router.navigate(['/findOwnerByEmail']);
+}
 
 
 }
+
+
+
+

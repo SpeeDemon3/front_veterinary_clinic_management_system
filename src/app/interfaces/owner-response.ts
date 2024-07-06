@@ -1,3 +1,4 @@
+import { InvoiceResponse } from "./invoice-response";
 import { PetResponse } from "./pet-response";
 
 export interface OwnerResponse {
