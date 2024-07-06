@@ -4,45 +4,44 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { HeaderComponent } from '../header/header.component';
 import { NavComponent } from '../nav/nav.component';
-import { UserResponse } from '../../interfaces/user-response';
-import { UserService } from '../../services/user-service';
+import { PetService } from '../../services/pet.service';
+import { PetResponse } from '../../interfaces/pet-response';
 
 @Component({
-  selector: 'app-find-user-by-dni',
+  selector: 'app-find-pet-by-code',
   standalone: true,
   imports: [HeaderComponent, NavComponent, MatTableModule, MatInputModule, MatFormFieldModule],
-  templateUrl: './find-user-by-dni.component.html',
-  styleUrl: './find-user-by-dni.component.css'
+  templateUrl: './find-pet-by-code.component.html',
+  styleUrl: './find-pet-by-code.component.css'
 })
-export class FindUserByDniComponent {
-
+export class FindPetByCodeComponent {
   
-  private userService = inject(UserService)
-  public displayedColumns: string[] = ['id', 'name', 'email', 'dni', 'phoneNumber', 'birthdate', 'img'];
-  public dataSource = new MatTableDataSource<UserResponse>();
+  private petService = inject(PetService)
+  public displayedColumns: string[] = ['identificationCode', 'name', 'description', 'vaccinationData', 'img', 'birthdate', 'medication'];
+  public dataSource = new MatTableDataSource<PetResponse>();
 
-  findUserByDni(dni: string) {
-    console.log(dni);
-    if (dni.length === 9) {
-      this.userService.findByDni(dni).subscribe({
-        next: (data: UserResponse) => {
+  findPetByCode(code: string) {
+    console.log(code);
+    if (code.trim().length > 0) {
+      this.petService.findByCode(code).subscribe({
+        next: (data: PetResponse) => {
           if (data) {
             this.dataSource.data = [data];
+            console.log(data);
           } else {
-            console.error("User not found!!!");
+            console.error("Pet not found!!!");
             this.dataSource.data = []; // Limpiar los datos de la tabla si no se encontró ningún usuario
           }
         },
         error: (err: any) => {
-          console.error("Error finding user: ", err);
+          console.error("Error finding pet: ", err);
           this.dataSource.data = []; // Limpiar los datos de la tabla en caso de error
         }
       });
     } else {
-      console.error("Invalid user DNI.");
+      console.error("Invalid pet code.");
       this.dataSource.data = []; // Limpiar los datos de la tabla si el ID no es válido
     }
   }
   
-
 }

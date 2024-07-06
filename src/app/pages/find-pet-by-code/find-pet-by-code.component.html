@@ -1,0 +1,61 @@
+<app-header/>
+<app-nav/>
+
+<!--Paginacion real-->
+<div class="centered-container">
+
+  <div>
+    <mat-form-field>
+      <mat-label>Insert Pet Code</mat-label>
+      <input matInput (keyup)="findPetByCode(petCodeInput.value)" placeholder="Ex. arb123" #petCodeInput>
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="identificationCode">
+        <th mat-header-cell *matHeaderCellDef> Identification Code </th>
+        <td mat-cell *matCellDef="let element"> {{element.identificationCode}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Description </th>
+        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vaccinationData">
+        <th mat-header-cell *matHeaderCellDef> Vaccination Data </th>
+        <td mat-cell *matCellDef="let element"> {{element.vaccinationData}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="medication">
+          <th mat-header-cell *matHeaderCellDef> Medication </th>
+          <td mat-cell *matCellDef="let element"> {{element.medication}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="birthdate">
+          <th mat-header-cell *matHeaderCellDef> Birthdate </th>
+          <td mat-cell *matCellDef="let element"> {{element.birthdate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="img">
+            <th mat-header-cell *matHeaderCellDef> Image </th>
+            <td mat-cell *matCellDef="let element"> <img [src]="element.img" alt="Pet Image" width="50"> </td>
+        </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="7">No data matching the filter "{{petCodeInput.value}}"</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+

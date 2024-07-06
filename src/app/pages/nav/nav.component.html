@@ -43,6 +43,7 @@
 <mat-menu #pet="matMenu" class="custom-mat-menu">
   <button mat-menu-item>Create New Pet</button>
   <button mat-menu-item (click)="navigateToFindPetById()">Find Pet By Id</button>
+  <button mat-menu-item (click)="navigateToFindPetByCode()">Find Pet By Code</button>
   <button mat-menu-item (click)="navigateToFindAllPets()">Find All Pets</button>
   <button mat-menu-item>Delete Pet By Id</button>
   <button mat-menu-item>Update Pet By Id</button>
@@ -50,7 +51,6 @@
   <button mat-menu-item>Show Pet Image</button>
   <button mat-menu-item>Download File Csv Pets</button>
   <button mat-menu-item>Download File Json Pets</button>
-  <button mat-menu-item>Find Pet By Code</button>
 </mat-menu>
 
 <mat-menu #invoice="matMenu" class="custom-mat-menu">
