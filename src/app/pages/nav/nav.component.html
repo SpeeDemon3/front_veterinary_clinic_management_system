@@ -55,7 +55,7 @@
 
 <mat-menu #invoice="matMenu" class="custom-mat-menu">
   <button mat-menu-item>Create New Invoice</button>
-  <button mat-menu-item>Find Invoice By Id</button>
+  <button mat-menu-item (click)="navigateToFindInvoiceById()">Find Invoice By Id</button>
   <button mat-menu-item>Find Invoice By Client DNI</button>
   <button mat-menu-item>Find Invoice By State</button>
   <button mat-menu-item>Find All Invoices</button>

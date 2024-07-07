@@ -66,6 +66,10 @@ navigateFindAllOwners() {
   this.router.navigate(['/findAllOwners']);
 }
 
+navigateToFindInvoiceById() {
+  this.router.navigate(['/findInvoiceById']);
+}
+
 
 }
 
