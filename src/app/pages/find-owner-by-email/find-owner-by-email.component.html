@@ -47,6 +47,16 @@
         <th mat-header-cell *matHeaderCellDef> Phone Number </th>
         <td mat-cell *matCellDef="let element"> {{element.phoneNumber}} </td>
       </ng-container>
+      
+      <ng-container matColumnDef="pets">
+        <th mat-header-cell *matHeaderCellDef> Pets Number </th>
+        <td mat-cell *matCellDef="let element"> {{element.pets?.length}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="invoices">
+        <th mat-header-cell *matHeaderCellDef> Invoices Number </th>
+        <td mat-cell *matCellDef="let element"> {{element.invoices?.length}} </td>
+      </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

@@ -17,7 +17,7 @@ import { OwnerResponse } from '../../interfaces/owner-response';
 export class FindOwnerByIdComponent {
 
   private ownerService = inject(OwnerService);
-  public displayedColumns: string[] = ['id', 'name', 'lastName', 'email', 'dni', 'phoneNumber'];
+  public displayedColumns: string[] = ['id', 'name', 'lastName', 'email', 'dni', 'phoneNumber', 'pets', 'invoices'];
   public dataSource = new MatTableDataSource<OwnerResponse>();
 
   constructor() {}

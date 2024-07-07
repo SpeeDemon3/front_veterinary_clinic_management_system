@@ -21,7 +21,7 @@ export class FindAllUsersComponent {
 
   private userService = inject(UserService);
   public userList : UserResponse[] = [];
-  public displayedColumns: string[] = ['id', 'name', 'email', 'dni', 'phoneNumber', 'img', 'birthdate'];
+  public displayedColumns: string[] = ['id', 'name', 'email', 'dni', 'phoneNumber', 'img', 'birthdate', 'pets'];
 
   constructor() {
     this.userService.findAll().subscribe({

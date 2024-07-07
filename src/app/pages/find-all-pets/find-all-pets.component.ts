@@ -4,19 +4,21 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { PetService } from '../../services/pet.service';
 import { PetResponse } from '../../interfaces/pet-response';
+import { HeaderComponent } from "../header/header.component";
+import { NavComponent } from "../nav/nav.component";
 
 @Component({
-  selector: 'app-find-all-pets',
-  standalone: true,
-  imports: [MatCardModule, MatTableModule, CommonModule],
-  templateUrl: './find-all-pets.component.html',
-  styleUrl: './find-all-pets.component.css'
+    selector: 'app-find-all-pets',
+    standalone: true,
+    templateUrl: './find-all-pets.component.html',
+    styleUrl: './find-all-pets.component.css',
+    imports: [MatCardModule, MatTableModule, CommonModule, HeaderComponent, NavComponent]
 })
 export class FindAllPetsComponent {
 
   private petService = inject(PetService);
   public petList : PetResponse[] = [];
-  public displayedColumns: string[] = ['identificationCode', 'name', 'description', 'vaccinationData', 'img', 'birthdate', 'medication'];
+  public displayedColumns: string[] = ['identificationCode', 'veterinarian', 'name', 'description', 'vaccinationData', 'img', 'birthdate', 'medication'];
 
   constructor() {
     this.petService.findAllPets().subscribe({

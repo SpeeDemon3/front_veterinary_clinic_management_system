@@ -18,7 +18,7 @@ export class FindUserByDniComponent {
 
   
   private userService = inject(UserService)
-  public displayedColumns: string[] = ['id', 'name', 'email', 'dni', 'phoneNumber', 'birthdate', 'img'];
+  public displayedColumns: string[] = ['id', 'name', 'email', 'dni', 'phoneNumber', 'birthdate', 'pets', 'img'];
   public dataSource = new MatTableDataSource<UserResponse>();
 
   findUserByDni(dni: string) {
