@@ -70,6 +70,13 @@ navigateToFindInvoiceById() {
   this.router.navigate(['/findInvoiceById']);
 }
 
+navigateToFindInvoiceByClientDni() {
+  this.router.navigate(['/findByClientDNI']);
+}
+
+navigateToFindAllInvoices() {
+  this.router.navigate(['/findAllInvoice']);
+}
 
 }
 

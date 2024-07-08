@@ -19,4 +19,13 @@ export class InvoiceService {
     return this.http.get<InvoiceResponse>(`${this.UrlBase}/invoice/findById/${id}`);
   }
 
+  findByClientDni(dni : string) : Observable<InvoiceResponse[]> {
+    return this.http.get<InvoiceResponse[]>(`${this.UrlBase}/invoice/findByClientDni/${dni}`);
+  }
+
+  findAll() : Observable<InvoiceResponse[]> {
+    return this.http.get<InvoiceResponse[]>(`${this.UrlBase}/invoice/findAll`);
+  }
+
+
 }
