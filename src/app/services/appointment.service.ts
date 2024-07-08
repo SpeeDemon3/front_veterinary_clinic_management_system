@@ -17,5 +17,9 @@ export class AppointmentService {
   findAllAppointment() : Observable<AppointmentResponse[]> {
     return this.http.get<AppointmentResponse[]>(`${this.UrlBase}/appointment/findAll`);
   }
+
+  findAppointmentById(id : number) : Observable<AppointmentResponse> {
+    return this.http.get<AppointmentResponse>(`${this.UrlBase}/appointment/findById/${id}`);
+  }
   
 }

@@ -7,7 +7,7 @@
   <div>
     <mat-form-field>
       <mat-label>Insert Invoice ID</mat-label>
-      <input matInput (keyup)="findInvoiceById(invoiceCodeInput.value)" placeholder="Ex. 123" #invoiceCodeInput>
+      <input matInput (keyup)="findInvoiceById(appointmentCodeInput.value)" placeholder="Ex. 123" #appointmentCodeInput>
     </mat-form-field>
 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -53,7 +53,7 @@
 
       <!-- Row shown when there is no matching data. -->
       <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="7">No data matching the filter "{{invoiceCodeInput.value}}"</td>
+        <td class="mat-cell" colspan="7">No data matching the filter "{{appointmentCodeInput.value}}"</td>
       </tr>
     </table>
   </div>

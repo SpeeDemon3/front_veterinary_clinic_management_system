@@ -86,6 +86,9 @@ navigateFindAllAppointment() {
   this.router.navigate(['/findAllAppointment']);
 }
 
+navigateToFindAppointmentById() {
+  this.router.navigate(['/findAppointmentById']);
+}
 
 
 }

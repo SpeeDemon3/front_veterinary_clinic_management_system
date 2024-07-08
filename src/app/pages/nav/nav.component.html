@@ -67,7 +67,7 @@
 
 <mat-menu #appointment="matMenu" class="custom-mat-menu">
   <button mat-menu-item>Create New Appointment</button>
-  <button mat-menu-item>Find Appointment By Id</button>
+  <button mat-menu-item (click)="navigateToFindAppointmentById()">Find Appointment By Id</button>
   <button mat-menu-item>Find Appointment By Pet Id</button>
   <button mat-menu-item>Find Appointment By Veterinarian Id</button>
   <button mat-menu-item>Find Appointments By Date</button>
