@@ -20,6 +20,7 @@ import { FindInvoiceByIdComponent } from './pages/find-invoice-by-id/find-invoic
 import { FindInvoiceByDniComponent } from './pages/find-invoice-by-dni/find-invoice-by-dni.component';
 import { FindAllInvoiceComponent } from './pages/find-all-invoice/find-all-invoice.component';
 import { FindInvoiceByStateComponent } from './pages/find-invoice-by-state/find-invoice-by-state.component';
+import { FindAllAppointmentComponent } from './pages/find-all-appointment/find-all-appointment.component';
 
 export const routes: Routes = [
     {
@@ -102,7 +103,12 @@ export const routes: Routes = [
     {
       path: "findInvoicesByState",
       component: FindInvoiceByStateComponent
+    },
+    {
+      path: "findAllAppointment",
+      component: FindAllAppointmentComponent
     }
+    
 
 
 

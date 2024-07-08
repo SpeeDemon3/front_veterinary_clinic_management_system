@@ -82,6 +82,9 @@ navigateToFindInvoicesByState() {
   this.router.navigate(['/findInvoicesByState']);
 }
 
+navigateFindAllAppointment() {
+  this.router.navigate(['/findAllAppointment']);
+}
 
 
 

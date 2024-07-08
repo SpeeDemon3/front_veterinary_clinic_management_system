@@ -1,0 +1,58 @@
+<app-header/>
+<app-nav/>
+
+<div class="card-container">
+    <mat-card>
+
+        <mat-card-header>
+            <mat-card-title>Appointment List</mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+
+            <table mat-table [dataSource]="appointmentList" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef> ID </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="dateOfAppointment">
+                  <th mat-header-cell *matHeaderCellDef> Date Of Appointment </th>
+                  <td mat-cell *matCellDef="let element"> {{element.dateOfAppointment}} </td>
+                </ng-container>
+                            
+                <ng-container matColumnDef="appointmentTime">
+                  <th mat-header-cell *matHeaderCellDef> Appointment Time </th>
+                  <td mat-cell *matCellDef="let element"> {{element.appointmentTime}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="description">
+                  <th mat-header-cell *matHeaderCellDef> Description </th>
+                  <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                </ng-container>
+                
+                  <ng-container matColumnDef="veterinarian">
+                    <th mat-header-cell *matHeaderCellDef> Veterinarian DNI </th>
+                    <td mat-cell *matCellDef="let element"> {{element.veterinarian.dni}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="pet">
+                    <th mat-header-cell *matHeaderCellDef> Pet ID </th>
+                    <td mat-cell *matCellDef="let element"> {{element.pet}} </td>
+                  </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              
+              
+
+        </mat-card-content>
+
+    </mat-card>
+</div>
