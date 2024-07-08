@@ -94,6 +94,10 @@ navigateToFindAppointmentByPetId() {
   this.router.navigate(['/findAppointmentsByPetId']);
 }
 
+navigateToFindAppointmentByVeterinarianId() {
+  this.router.navigate(['/findAppointmentsByVeterinarianId']);
+}
+
 
 }
 
