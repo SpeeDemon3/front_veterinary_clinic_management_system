@@ -27,5 +27,9 @@ export class InvoiceService {
     return this.http.get<InvoiceResponse[]>(`${this.UrlBase}/invoice/findAll`);
   }
 
+  findInvoicesByState(state : string) : Observable<InvoiceResponse[]> {
+    return this.http.get<InvoiceResponse[]>(`${this.UrlBase}/invoice/findByState/${state}`);
+  }
+
 
 }

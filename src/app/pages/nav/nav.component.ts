@@ -78,6 +78,13 @@ navigateToFindAllInvoices() {
   this.router.navigate(['/findAllInvoice']);
 }
 
+navigateToFindInvoicesByState() {
+  this.router.navigate(['/findInvoicesByState']);
+}
+
+
+
+
 }
 
 

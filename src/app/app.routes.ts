@@ -19,6 +19,7 @@ import { FindAllOwnerComponent } from './pages/find-all-owner/find-all-owner.com
 import { FindInvoiceByIdComponent } from './pages/find-invoice-by-id/find-invoice-by-id.component';
 import { FindInvoiceByDniComponent } from './pages/find-invoice-by-dni/find-invoice-by-dni.component';
 import { FindAllInvoiceComponent } from './pages/find-all-invoice/find-all-invoice.component';
+import { FindInvoiceByStateComponent } from './pages/find-invoice-by-state/find-invoice-by-state.component';
 
 export const routes: Routes = [
     {
@@ -97,7 +98,13 @@ export const routes: Routes = [
     {
       path: "findAllInvoice",
       component: FindAllInvoiceComponent
+    },
+    {
+      path: "findInvoicesByState",
+      component: FindInvoiceByStateComponent
     }
+
+
 
 
 ];
