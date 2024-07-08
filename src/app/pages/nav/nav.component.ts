@@ -98,6 +98,9 @@ navigateToFindAppointmentByVeterinarianId() {
   this.router.navigate(['/findAppointmentsByVeterinarianId']);
 }
 
+navigateToFindAppointmentByState() {
+  this.router.navigate(['/findAppointmentsByDate']);
+}
 
 }
 

@@ -29,5 +29,9 @@ export class AppointmentService {
   findAppointmentByVeterinarianId(idVeterinarian : number) : Observable<AppointmentResponse[]> {
     return this.http.get<AppointmentResponse[]>(`${this.UrlBase}/appointment/findAppointmentsByVeterinarianId/${idVeterinarian}`);
   }
+
+  findAppointmentsByDate(date : string) : Observable<AppointmentResponse[]> {
+    return this.http.get<AppointmentResponse[]>(`${this.UrlBase}/appointment/findAppointmentsByDate/${date}`);
+  }
   
 }
