@@ -90,6 +90,10 @@ navigateToFindAppointmentById() {
   this.router.navigate(['/findAppointmentById']);
 }
 
+navigateToFindAppointmentByPetId() {
+  this.router.navigate(['/findAppointmentsByPetId']);
+}
+
 
 }
 

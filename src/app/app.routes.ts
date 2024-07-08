@@ -22,6 +22,7 @@ import { FindAllInvoiceComponent } from './pages/find-all-invoice/find-all-invoi
 import { FindInvoiceByStateComponent } from './pages/find-invoice-by-state/find-invoice-by-state.component';
 import { FindAllAppointmentComponent } from './pages/find-all-appointment/find-all-appointment.component';
 import { FindAppointmentByIdComponent } from './pages/find-appointment-by-id/find-appointment-by-id.component';
+import { FindAppointmentsByPetIdComponent } from './pages/find-appointments-by-pet-id/find-appointments-by-pet-id.component';
 
 export const routes: Routes = [
     {
@@ -112,6 +113,10 @@ export const routes: Routes = [
     {
       path: "findAppointmentById",
       component: FindAppointmentByIdComponent
+    },
+    {
+      path: "findAppointmentsByPetId",
+      component: FindAppointmentsByPetIdComponent
     }
     
 
