@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { appsettings } from '../settings/appsettings';
 import { Observable } from 'rxjs';
 import { AppointmentResponse } from '../interfaces/appointment-response';
+import { AppointmentRequest } from '../interfaces/appointment-request';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,10 @@ export class AppointmentService {
 
   findAppointmentsByDate(date : string) : Observable<AppointmentResponse[]> {
     return this.http.get<AppointmentResponse[]>(`${this.UrlBase}/appointment/findAppointmentsByDate/${date}`);
+  }
+
+  createAppointment(idVeterinarian : number, idPet : number, appointment : AppointmentRequest) : Observable<AppointmentRequest> {
+    return this.http.post<AppointmentResponse>(`${this.UrlBase}/appointment/addAppointment/${idVeterinarian}/${idPet}`, appointment);
   }
   
 }

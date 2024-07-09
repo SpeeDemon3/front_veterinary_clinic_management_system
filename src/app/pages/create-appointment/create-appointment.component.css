@@ -1,0 +1,26 @@
+.card-container {
+    display: flex;
+    justify-content: center; 
+
+    align-items: center;
+    margin-top: 100px;
+}
+
+.form-custom {
+    min-width: 150px;
+    width: 100%;
+}
+
+.input-custom {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.flex button {
+    margin-left: 0; /* Eliminar el margen izquierdo que tenías inline */
+}

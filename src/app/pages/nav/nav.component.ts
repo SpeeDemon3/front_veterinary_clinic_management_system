@@ -114,6 +114,9 @@ navigateToCreateInvoice() {
   this.router.navigate(['/createInvoice']);
 }
 
+navigateToCreateAppointment() {
+  this.router.navigate(['/createAppointment']);
+}
 
 }
 

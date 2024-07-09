@@ -1,0 +1,36 @@
+<div class="card-container">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Create Appointment</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="form-custom" [formGroup]="formCreateAppointment">
+                <mat-form-field class="input-custom">
+                    <mat-label>ID of the veterinarian in charge of the pet</mat-label>
+                    <input matInput formControlName="idVeterinarian" placeholder="Ex. 123">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>ID Pet</mat-label>
+                    <input matInput formControlName="idPet" placeholder="Ex. 123">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Date Of Appointment</mat-label>
+                    <input matInput formControlName="dateOfAppointment" placeholder="dd-mm-yyyy">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Appointment Time</mat-label>
+                    <input matInput formControlName="appointmentTime" placeholder="10:00 a.m or 17:00 p.m">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Description</mat-label>
+                    <input matInput formControlName="description" placeholder="Description appointment">
+                </mat-form-field>
+
+                <div class="flex">
+                    <button mat-flat-button color="primary" (click)="createAppointment()">Create</button>
+                    <button mat-flat-button color="warn" (click)="returnHome()" style="margin-left: 9px;">Return Home</button>
+                </div>
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>

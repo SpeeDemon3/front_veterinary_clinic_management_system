@@ -28,6 +28,7 @@ import { FindAppointmentsByDateComponent } from './pages/find-appointments-by-da
 import { CreatePetComponent } from './pages/create-pet/create-pet.component';
 import { CreateOwnerComponent } from './pages/create-owner/create-owner.component';
 import { CreateInvoiceComponent } from './pages/create-invoice/create-invoice.component';
+import { CreateAppointmentComponent } from './pages/create-appointment/create-appointment.component';
 
 export const routes: Routes = [
     {
@@ -142,6 +143,10 @@ export const routes: Routes = [
     {
       path: "createInvoice",
       component: CreateInvoiceComponent
+    },
+    {
+      path: "createAppointment",
+      component: CreateAppointmentComponent
     }
 
 
