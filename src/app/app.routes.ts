@@ -25,6 +25,7 @@ import { FindAppointmentByIdComponent } from './pages/find-appointment-by-id/fin
 import { FindAppointmentsByPetIdComponent } from './pages/find-appointments-by-pet-id/find-appointments-by-pet-id.component';
 import { FindAppointmentsByVeterinarianIdComponent } from './pages/find-appointments-by-veterinarian-id/find-appointments-by-veterinarian-id.component';
 import { FindAppointmentsByDateComponent } from './pages/find-appointments-by-date/find-appointments-by-date.component';
+import { CreatePetComponent } from './pages/create-pet/create-pet.component';
 
 export const routes: Routes = [
     {
@@ -127,6 +128,10 @@ export const routes: Routes = [
     {
       path: "findAppointmentsByDate",
       component: FindAppointmentsByDateComponent
+    },
+    {
+      path: "createPet",
+      component: CreatePetComponent
     }
 
 

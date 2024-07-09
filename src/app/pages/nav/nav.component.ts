@@ -102,6 +102,12 @@ navigateToFindAppointmentByState() {
   this.router.navigate(['/findAppointmentsByDate']);
 }
 
+navigateToCreatePet() {
+  this.router.navigate(['/createPet']);
+}
+
+
+
 }
 
 

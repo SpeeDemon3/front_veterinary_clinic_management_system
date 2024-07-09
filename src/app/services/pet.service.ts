@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PetResponse } from '../interfaces/pet-response';
 import { appsettings } from '../settings/appsettings';
+import { PetRequest } from '../interfaces/pet-request';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,10 @@ export class PetService {
 
   findByCode(code : string) : Observable<PetResponse> {
     return this.http.get<PetResponse>(`${this.UrlBase}/pet/findByCode/${code}`);
+  }
+
+  addPet(VeterinarianId : number, pet : PetRequest) : Observable<PetRequest> {
+    return this.http.post<PetRequest>(`${this.UrlBase}/pet/add/${VeterinarianId}`, pet);
   }
 
 }
