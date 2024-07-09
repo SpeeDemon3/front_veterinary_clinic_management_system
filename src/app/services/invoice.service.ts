@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { appsettings } from '../settings/appsettings';
 import { Observable } from 'rxjs';
 import { InvoiceResponse } from '../interfaces/invoice-response';
+import { InvoiceRequest } from '../interfaces/invoice-request';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,10 @@ export class InvoiceService {
 
   findInvoicesByState(state : string) : Observable<InvoiceResponse[]> {
     return this.http.get<InvoiceResponse[]>(`${this.UrlBase}/invoice/findByState/${state}`);
+  }
+
+  createInvoice(dniOwner : string, invoiceRequest : InvoiceRequest) : Observable<InvoiceRequest> {
+    return this.http.post<InvoiceRequest>(`${this.UrlBase}/invoice/add/${dniOwner}`, invoiceRequest);
   }
 
 

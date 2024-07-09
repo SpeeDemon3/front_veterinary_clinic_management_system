@@ -110,6 +110,9 @@ navigateToCreateOwner() {
   this.router.navigate(['/createOwner']);
 }
 
+navigateToCreateInvoice() {
+  this.router.navigate(['/createInvoice']);
+}
 
 
 }
