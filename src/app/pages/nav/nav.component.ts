@@ -106,6 +106,10 @@ navigateToCreatePet() {
   this.router.navigate(['/createPet']);
 }
 
+navigateToCreateOwner() {
+  this.router.navigate(['/createOwner']);
+}
+
 
 
 }

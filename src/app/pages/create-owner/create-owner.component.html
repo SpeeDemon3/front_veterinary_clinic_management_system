@@ -1,0 +1,40 @@
+<div class="card-container">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Create Owner</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="form-custom" [formGroup]="formCreateOwner">
+                <mat-form-field class="input-custom">
+                    <mat-label>Customer Pet ID</mat-label>
+                    <input matInput formControlName="idPet" placeholder="Ex. 123" type="number">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" placeholder="Name...">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName" placeholder="Last name...">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" placeholder="example@gmail.com">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>DNI</mat-label>
+                    <input matInput formControlName="dni" placeholder="11223344X">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput formControlName="phoneNumber" placeholder="+34 666778899">
+                </mat-form-field>
+
+                <div class="flex">
+                    <button mat-flat-button color="primary" (click)="createOwner()">Create</button>
+                    <button mat-flat-button color="warn" (click)="returnHome()" style="margin-left: 9px;">Return Home</button>
+                </div>
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>

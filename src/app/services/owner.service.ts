@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { appsettings } from '../settings/appsettings';
 import { Observable } from 'rxjs';
 import { OwnerResponse } from '../interfaces/owner-response';
+import { OwnerRequest } from '../interfaces/owner-request';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +29,10 @@ export class OwnerService {
 
   findAll() : Observable<OwnerResponse[]> {
     return this.http.get<OwnerResponse[]>(`${this.UrlBase}/owner/findAll`);
+  }
+
+  addOwner(idPet : number, owner: OwnerRequest) : Observable<OwnerRequest> {
+    return this.http.post<OwnerRequest>(`${this.UrlBase}/owner/add/${idPet}`, owner);
   }
 
 }
