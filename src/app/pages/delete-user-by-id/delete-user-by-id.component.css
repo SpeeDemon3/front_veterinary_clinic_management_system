@@ -40,7 +40,7 @@ mat-card-title {
     text-align: center;
     font-size: 26px;
     font-weight: bold;
-    color: rgba(235, 15, 15, 0.895);
+    color: rgba(235, 15, 15, 0.718);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra oscura al texto */
     letter-spacing: 4px; /* Separación entre las letras */
 }

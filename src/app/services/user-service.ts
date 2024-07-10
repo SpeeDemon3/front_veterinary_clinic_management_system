@@ -32,7 +32,7 @@ export class UserService {
   }
 
   deleteById(id : number) {
-    return this.http.delete<void>(`${this.UrlBase}/user/deleteById/${id}`);
+    return this.http.delete<string>(`${this.UrlBase}/user/deleteById/${id}`);
   }
 
 }
