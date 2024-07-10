@@ -17,8 +17,8 @@ export class AccessService {
 
   constructor() { }
 
-  signup(object : SignUpRequest) : Observable<ResponseAccess> {
-    return this.http.post<ResponseAccess>(`${this.UrlBase}/user/signup`, object);
+  signup(object : SignUpRequest) : Observable<UserResponse> {
+    return this.http.post<UserResponse>(`${this.UrlBase}/user/signup`, object);
   }
 
   login(object : LoginRequest) : Observable<ResponseAccess> {

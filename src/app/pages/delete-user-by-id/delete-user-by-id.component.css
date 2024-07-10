@@ -1,0 +1,45 @@
+.card-container {
+    display: flex;
+    justify-content: center; 
+
+    align-items: center;
+    margin-top: 100px;
+}
+
+.form-custom {
+    min-width: 150px;
+    width: 100%;
+}
+
+.input-custom {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.flex button {
+    margin-left: 0; /* Eliminar el margen izquierdo que tenías inline */
+  }
+
+  mat-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+mat-card-title {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    margin: 8px auto;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: rgba(235, 15, 15, 0.895);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra oscura al texto */
+    letter-spacing: 4px; /* Separación entre las letras */
+  }

@@ -1,5 +1,7 @@
 
 <button mat-button [matMenuTriggerFor]="clinic" class="custom-management-button">Management</button>
+<button mat-button [matMenuTriggerFor]="clinic" class="custom-management-button" id="exit-button" (click)="navigateToLogin()">Exit</button>
+
 <mat-menu #clinic="matMenu" class="custom-mat-menu">
   <button mat-menu-item [matMenuTriggerFor]="owner">Owner Management</button>
   <button mat-menu-item [matMenuTriggerFor]="pet">Pet Management</button>
@@ -31,7 +33,7 @@
   <button mat-menu-item (click)="navigateToFindUserByDni()">Find User By DNI</button>
   <button mat-menu-item (click)="navigateToFindAllUser()">Find All Users</button>
   <button mat-menu-item>Update User By Id</button>
-  <button mat-menu-item>Delete User By Id</button>
+  <button mat-menu-item (click)="navigateToDeleleteUserById()">Delete User By Id</button>
   <button mat-menu-item>Add Image To User</button>
   <button mat-menu-item>Show User Image</button>
   <button mat-menu-item>Download File Csv Users</button>

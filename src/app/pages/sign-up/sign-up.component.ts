@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AccessService } from '../../services/access.service';
 import { SignUpRequest } from '../../interfaces/sign-up-request';
@@ -29,17 +29,20 @@ export class SignUpComponent {
 
   public formSignUp: FormGroup = this.formBuild.group({
     name: ['', Validators.required],
-    email: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required],
-    dni: ['', Validators.required],
+    dni: ['', [Validators.required, Validators.pattern(/^\d{8}[A-Z]$/)]],
     phoneNumber: ['', Validators.required],
     img: [null, Validators.required],
-    birthdate: ['', Validators.required]
+    birthdate: ['', [Validators.required, this.dateValidator]]
   })
 
   signUp() {
 
-    if (this.formSignUp.invalid) return;
+    if (this.formSignUp.invalid) {
+      console.log('Form is invalid');
+      return;
+    }
 
     const object:SignUpRequest = {
       name: this.formSignUp.value.name,
@@ -51,6 +54,8 @@ export class SignUpComponent {
       birthdate: this.formSignUp.value.birthdate
     }
 
+    console.log('Attempting to sign up with object:', object);
+
     this.accessService.signup(object).subscribe(
       {
         next: (data) => {
@@ -61,8 +66,8 @@ export class SignUpComponent {
           }
         },
         error: (err) => {
+          alert(`Sign up error: ${err.message || 'Unknown error'}`);
           console.log('Sign up error: ', err.message);
-          console.log(err);
         }
       })
   }
@@ -72,21 +77,33 @@ export class SignUpComponent {
     this.router.navigate(['/']);
   }
 
-    // Método para manejar el cambio de archivo
-    onFileChange(event: any) {
-      const file = (event.target as HTMLInputElement).files?.[0];
-      if (file) {
-        if (file.type !== 'image/png') {
-          this.formSignUp.get('img')?.setErrors({ invalidFormat: true });
-        } else {
+  // Método para manejar el cambio de archivo
+  onFileChange(event: any) {
+    const file = (event.target as HTMLInputElement).files?.[0];
+    if (file) {
+      if (file.type !== 'image/png') {
+        this.formSignUp.get('img')?.setErrors({ invalidFormat: true });
+        console.log('Invalid image format. Only PNG is allowed.');
+      } else {
+        const reader = new FileReader();
+        reader.onload = () => {
+          this.formSignUp.patchValue({ img: { dataUrlImg: reader.result } });
           this.formSignUp.get('img')?.setErrors(null); // Limpiar errores si el formato es correcto
-          this.formSignUp.patchValue({ img: file });
-        }
+          console.log('Image file is valid and has been read successfully.');
+        };
+        reader.readAsDataURL(file);
       }
     }
+  }
 
     get imgControl() {
       return this.formSignUp.get('img');
+    }
+
+    // Validator para la fecha de nacimiento
+    dateValidator(control: AbstractControl): { [key: string]: any } | null {
+      const dateRegex = /^\d{2}-\d{2}-\d{4}$/;
+      return dateRegex.test(control.value) ? null : { invalidDate: true };
     }
 }
 

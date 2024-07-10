@@ -18,6 +18,10 @@ constructor(
   private router : Router
 ){}
 
+navigateToLogin() {
+  this.router.navigate(['/']);
+}
+
 navigateToFindUserById() {
   this.router.navigate(['/findUserById']);
 }
@@ -117,6 +121,12 @@ navigateToCreateInvoice() {
 navigateToCreateAppointment() {
   this.router.navigate(['/createAppointment']);
 }
+
+navigateToDeleleteUserById() {
+  this.router.navigate(['/deleteUserById']);
+}
+
+
 
 }
 

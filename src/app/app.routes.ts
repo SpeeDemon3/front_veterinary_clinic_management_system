@@ -29,6 +29,7 @@ import { CreatePetComponent } from './pages/create-pet/create-pet.component';
 import { CreateOwnerComponent } from './pages/create-owner/create-owner.component';
 import { CreateInvoiceComponent } from './pages/create-invoice/create-invoice.component';
 import { CreateAppointmentComponent } from './pages/create-appointment/create-appointment.component';
+import { DeleteUserByIdComponent } from './pages/delete-user-by-id/delete-user-by-id.component';
 
 export const routes: Routes = [
     {
@@ -147,6 +148,10 @@ export const routes: Routes = [
     {
       path: "createAppointment",
       component: CreateAppointmentComponent
+    },
+    {
+      path: "deleteUserById",
+      component: DeleteUserByIdComponent
     }
 
 

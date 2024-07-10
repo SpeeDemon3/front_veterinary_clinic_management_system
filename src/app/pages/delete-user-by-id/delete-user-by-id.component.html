@@ -1,0 +1,23 @@
+<app-header/>
+<app-nav/>
+
+<div class="card-container">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Delete User</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="form-custom" [formGroup]="formDeleteUserById">
+                <mat-form-field class="input-custom">
+                    <mat-label>Delete User</mat-label>
+                    <input matInput formControlName="id" placeholder="Enter the ID of the user you want to delete." type="number">
+                </mat-form-field>
+
+                <div class="flex">
+                    <button mat-flat-button color="warn" (click)="deleteUserById()">Delete</button>
+                    <button mat-flat-button color="primary" (click)="returnHome()" style="margin-left: 9px;">Return Home</button>
+                </div>
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>
