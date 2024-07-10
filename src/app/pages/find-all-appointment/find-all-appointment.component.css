@@ -12,3 +12,23 @@
 .input-custom {
     width: 100%;
 }
+
+mat-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  
+  mat-card-title {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    margin: 8px auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(166, 124, 155);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra oscura al texto */
+    letter-spacing: 4px; /* Separación entre las letras */
+  }

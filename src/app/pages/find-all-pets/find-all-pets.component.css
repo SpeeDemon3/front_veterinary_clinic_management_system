@@ -12,3 +12,23 @@
 .input-custom {
     width: 100%;
 }
+
+mat-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+mat-card-title {
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    margin: 8px auto;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgba(227, 149, 220, 0.895);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra oscura al texto */
+    letter-spacing: 4px; /* Separación entre las letras */
+}

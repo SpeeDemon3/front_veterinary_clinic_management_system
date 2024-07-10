@@ -25,10 +25,11 @@
     margin-left: 0; /* Eliminar el margen izquierdo que tenías inline */
   }
 
-  mat-card-header {
+mat-card-header {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 
@@ -42,4 +43,4 @@ mat-card-title {
     color: rgba(235, 15, 15, 0.895);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra oscura al texto */
     letter-spacing: 4px; /* Separación entre las letras */
-  }
+}
