@@ -36,5 +36,9 @@ export class InvoiceService {
     return this.http.post<InvoiceRequest>(`${this.UrlBase}/invoice/add/${dniOwner}`, invoiceRequest);
   }
 
+  deleteById(id : number) : Observable<boolean> {
+    return this.http.delete<boolean>(`${this.UrlBase}/invoice/deleteById/${id}`);
+  }
+
 
 }

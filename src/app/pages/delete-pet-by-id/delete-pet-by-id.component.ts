@@ -38,20 +38,34 @@ export class DeletePetByIdComponent {
       return;
     }
 
+    /*
     this.petService.deletePetById(idPet).subscribe({
+
       next: (response: any) => {
         console.log('Response received from deleteById:', response);
-        alert("Pet deleted successfully.");
+        alert(`Error: 'An error occurred while trying to delete the pet.'}`);
         console.log(response)
-        this.router.navigate(['/findAllPets'])
+        //this.router.navigate(['/findAllPets'])
       },
       error: (error) => {
         alert("Pet deleted successfully.");
         this.router.navigate(['/findAllPets'])
         console.error("Delete pet error: ", error);
-        //alert(`Error: ${error.error?.message || 'An error occurred while trying to delete the user.'}`);
       }
     });
+    */
+
+    this.petService.deletePetById(idPet).subscribe(
+      response => {
+        console.log('Response received from deleteById:', response);
+        alert("Pet deleted successfully.");
+        this.router.navigate(['/findAllPets'])
+      },
+      error => {
+        alert(`Error: ${error.message}`);
+        console.error("Delete pet error: ", error);
+      })
+
 
   }
 

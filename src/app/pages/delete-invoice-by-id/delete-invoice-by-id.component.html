@@ -4,17 +4,17 @@
 <div class="card-container">
     <mat-card appearance="outlined">
         <mat-card-header>
-          <mat-card-title>Delete Pet</mat-card-title>
+          <mat-card-title>Delete Invoice</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <form class="form-custom" [formGroup]="formDeletePetById">
+            <form class="form-custom" [formGroup]="formDeleteInvoiceById">
                 <mat-form-field class="input-custom">
-                    <mat-label>Delete Pet ID</mat-label>
-                    <input matInput formControlName="id" placeholder="Enter the ID of the pet you want to delete.">
+                    <mat-label>Delete Invoice ID</mat-label>
+                    <input matInput formControlName="id" placeholder="Enter the ID of the invoice you want to delete.">
                 </mat-form-field>
 
                 <div class="flex">
-                    <button mat-flat-button color="warn" (click)="deletePetById()">Delete</button>
+                    <button mat-flat-button color="warn" (click)="DeleteInvoiceByIdComponent()">Delete</button>
                     <button mat-flat-button color="primary" (click)="returnHome()" style="margin-left: 9px;">Return Home</button>
                 </div>
             </form>

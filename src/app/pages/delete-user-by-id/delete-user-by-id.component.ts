@@ -63,15 +63,14 @@ export class DeleteUserByIdComponent {
       });
       */
 
+      
       this.userService.deleteById(idUser).subscribe({
         next: (response: any) => {
           console.log('Response received from deleteById:', response);
-          alert("User deleted successfully.");
           console.log(response)
           this.router.navigate(['/findAllUsers'])
         },
         error: (error) => {
-          alert("User deleted successfully.");
           this.router.navigate(['/findAllUsers'])
           console.error("Delete user error: ", error);
           //alert(`Error: ${error.error?.message || 'An error occurred while trying to delete the user.'}`);

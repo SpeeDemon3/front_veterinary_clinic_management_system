@@ -130,6 +130,10 @@ navigateToDeleletePetById() {
   this.router.navigate(['/deletePetById']);
 }
 
+navigateToDeleteInvoiceById() {
+  this.router.navigate(['/deleteInvoiceById']);
+}
+
 
 }
 

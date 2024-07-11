@@ -32,7 +32,7 @@ export class PetService {
   }
 
   deletePetById(id : number) {
-    return this.http.delete<string>(`${this.UrlBase}/pet/deleteById/${id}`);
+    return this.http.delete<boolean>(`${this.UrlBase}/pet/deleteById/${id}`);
   }
 
 }
