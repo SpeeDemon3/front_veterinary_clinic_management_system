@@ -35,6 +35,7 @@ import { DeleteInvoiceByIdComponent } from './pages/delete-invoice-by-id/delete-
 import { DeleteRoleByIdComponent } from './pages/delete-role-by-id/delete-role-by-id.component';
 import { DeleteAppointmentByIdComponent } from './pages/delete-appointment-by-id/delete-appointment-by-id.component';
 import { DeleteOwnerByIdComponent } from './pages/delete-owner-by-id/delete-owner-by-id.component';
+import { CreateRoleComponent } from './pages/create-role/create-role.component';
 
 export const routes: Routes = [
     {
@@ -153,6 +154,10 @@ export const routes: Routes = [
     {
       path: "createAppointment",
       component: CreateAppointmentComponent
+    },
+    {
+      path: "createRole",
+      component: CreateRoleComponent
     },
     {
       path: "deleteUserById",

@@ -81,7 +81,7 @@
 </mat-menu>
 
 <mat-menu #role="matMenu">
-  <button mat-menu-item>Create Role</button>
+  <button mat-menu-item (click)="navigateToCreateRole()">Create Role</button>
   <button mat-menu-item (click)="navigateToFindRoleById()">Find Role By Id</button>
   <button mat-menu-item (click)="navigateToFindAllRoles()">Find All Roles</button>
   <button mat-menu-item>Update Role By Id</button>

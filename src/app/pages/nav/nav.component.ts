@@ -122,6 +122,10 @@ navigateToCreateAppointment() {
   this.router.navigate(['/createAppointment']);
 }
 
+navigateToCreateRole() {
+  this.router.navigate(['/createRole']);
+}
+
 navigateToDeleleteUserById() {
   this.router.navigate(['/deleteUserById']);
 }
