@@ -38,5 +38,9 @@ export class AppointmentService {
   createAppointment(idVeterinarian : number, idPet : number, appointment : AppointmentRequest) : Observable<AppointmentRequest> {
     return this.http.post<AppointmentResponse>(`${this.UrlBase}/appointment/addAppointment/${idVeterinarian}/${idPet}`, appointment);
   }
+
+  deleteAppointmentById(id : number) : Observable<boolean> {
+    return this.http.delete<boolean>(`${this.UrlBase}/appointment/deleteById/${id}`);
+  }
   
 }

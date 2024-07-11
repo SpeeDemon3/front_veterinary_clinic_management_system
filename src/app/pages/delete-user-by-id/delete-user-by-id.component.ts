@@ -71,8 +71,8 @@ export class DeleteUserByIdComponent {
           this.router.navigate(['/findAllUsers'])
         },
         error: (error) => {
-          this.router.navigate(['/findAllUsers'])
           console.error("Delete user error: ", error);
+          alert(`Error: ${'An error occurred while trying to delete the user.'}`)
           //alert(`Error: ${error.error?.message || 'An error occurred while trying to delete the user.'}`);
         }
       });

@@ -138,6 +138,10 @@ navigateToDeleteRoleById() {
   this.router.navigate(['/deleteRoleById']);
 }
 
+navigateToDeleteAppointmentById() {
+  this.router.navigate(['/deleteAppointmentById']);
+}
+
 
 }
 
