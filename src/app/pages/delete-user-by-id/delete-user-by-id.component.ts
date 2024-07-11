@@ -86,11 +86,3 @@ export class DeleteUserByIdComponent {
 
 }
 
-/*
-      if (idUser > 0) {
-        (response: any) => {
-          console.log(response)
-          this.router.navigate(['/findAllUsers'])
-        }
-      }
-*/

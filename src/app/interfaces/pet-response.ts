@@ -1,6 +1,7 @@
 import { UserRequest } from "./user-request";
 
 export interface PetResponse {
+    id : number;
     veterinarian : UserRequest;
     identificationCode : string;
     name : string;

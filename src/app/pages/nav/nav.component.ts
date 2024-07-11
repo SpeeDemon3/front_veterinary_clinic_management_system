@@ -126,6 +126,9 @@ navigateToDeleleteUserById() {
   this.router.navigate(['/deleteUserById']);
 }
 
+navigateToDeleletePetById() {
+  this.router.navigate(['/deletePetById']);
+}
 
 
 }

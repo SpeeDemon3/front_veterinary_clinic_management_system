@@ -18,7 +18,7 @@ export class FindAllPetsComponent {
 
   private petService = inject(PetService);
   public petList : PetResponse[] = [];
-  public displayedColumns: string[] = ['identificationCode', 'veterinarian', 'name', 'description', 'vaccinationData', 'img', 'birthdate', 'medication'];
+  public displayedColumns: string[] = ['id', 'identificationCode', 'veterinarian', 'name', 'description', 'vaccinationData', 'img', 'birthdate', 'medication'];
 
   constructor() {
     this.petService.findAllPets().subscribe({

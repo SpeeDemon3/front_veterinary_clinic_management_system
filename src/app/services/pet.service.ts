@@ -31,4 +31,8 @@ export class PetService {
     return this.http.post<PetRequest>(`${this.UrlBase}/pet/add/${VeterinarianId}`, pet);
   }
 
+  deletePetById(id : number) {
+    return this.http.delete<string>(`${this.UrlBase}/pet/deleteById/${id}`);
+  }
+
 }

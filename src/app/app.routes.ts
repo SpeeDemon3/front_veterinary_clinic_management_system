@@ -30,6 +30,7 @@ import { CreateOwnerComponent } from './pages/create-owner/create-owner.componen
 import { CreateInvoiceComponent } from './pages/create-invoice/create-invoice.component';
 import { CreateAppointmentComponent } from './pages/create-appointment/create-appointment.component';
 import { DeleteUserByIdComponent } from './pages/delete-user-by-id/delete-user-by-id.component';
+import { DeletePetByIdComponent } from './pages/delete-pet-by-id/delete-pet-by-id.component';
 
 export const routes: Routes = [
     {
@@ -152,6 +153,10 @@ export const routes: Routes = [
     {
       path: "deleteUserById",
       component: DeleteUserByIdComponent
+    },
+    {
+      path: "deletePetById",
+      component: DeletePetByIdComponent
     }
 
 
