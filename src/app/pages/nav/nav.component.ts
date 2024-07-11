@@ -142,6 +142,10 @@ navigateToDeleteAppointmentById() {
   this.router.navigate(['/deleteAppointmentById']);
 }
 
+navigateToDeleteOwnerById() {
+  this.router.navigate(['/deleteOwnerById'])
+}
+
 
 }
 

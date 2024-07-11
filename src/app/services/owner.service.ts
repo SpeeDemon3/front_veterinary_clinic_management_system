@@ -35,4 +35,8 @@ export class OwnerService {
     return this.http.post<OwnerRequest>(`${this.UrlBase}/owner/add/${idPet}`, owner);
   }
 
+  deleteOwnerById(id : number) : Observable<boolean> {
+    return this.http.delete<boolean>(`${this.UrlBase}/owner/deleteById/${id}`);
+  }
+
 }

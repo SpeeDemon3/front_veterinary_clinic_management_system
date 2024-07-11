@@ -34,6 +34,7 @@ import { DeletePetByIdComponent } from './pages/delete-pet-by-id/delete-pet-by-i
 import { DeleteInvoiceByIdComponent } from './pages/delete-invoice-by-id/delete-invoice-by-id.component';
 import { DeleteRoleByIdComponent } from './pages/delete-role-by-id/delete-role-by-id.component';
 import { DeleteAppointmentByIdComponent } from './pages/delete-appointment-by-id/delete-appointment-by-id.component';
+import { DeleteOwnerByIdComponent } from './pages/delete-owner-by-id/delete-owner-by-id.component';
 
 export const routes: Routes = [
     {
@@ -172,6 +173,10 @@ export const routes: Routes = [
     {
       path: "deleteAppointmentById",
       component: DeleteAppointmentByIdComponent
+    },
+    {
+      path: "deleteOwnerById",
+      component: DeleteOwnerByIdComponent
     }
 
 
