@@ -20,4 +20,9 @@ export class RoleServiceService {
   findRoleById(id : number) : Observable<RoleResponse> {
     return this.http.get<RoleResponse>(`${this.UrlBase}/role/findById/${id}`);
   }
+
+  deleteRoleById(id : number) : Observable<boolean> {
+    return this.http.delete<boolean>(`${this.UrlBase}/role/deleteById/${id}`);
+  }
+
 }

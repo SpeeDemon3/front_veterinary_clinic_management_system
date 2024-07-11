@@ -134,6 +134,10 @@ navigateToDeleteInvoiceById() {
   this.router.navigate(['/deleteInvoiceById']);
 }
 
+navigateToDeleteRoleById() {
+  this.router.navigate(['/deleteRoleById']);
+}
+
 
 }
 

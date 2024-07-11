@@ -32,6 +32,7 @@ import { CreateAppointmentComponent } from './pages/create-appointment/create-ap
 import { DeleteUserByIdComponent } from './pages/delete-user-by-id/delete-user-by-id.component';
 import { DeletePetByIdComponent } from './pages/delete-pet-by-id/delete-pet-by-id.component';
 import { DeleteInvoiceByIdComponent } from './pages/delete-invoice-by-id/delete-invoice-by-id.component';
+import { DeleteRoleByIdComponent } from './pages/delete-role-by-id/delete-role-by-id.component';
 
 export const routes: Routes = [
     {
@@ -162,6 +163,10 @@ export const routes: Routes = [
     {
       path: "deleteInvoiceById",
       component: DeleteInvoiceByIdComponent
+    },
+    {
+      path: "deleteRoleById",
+      component: DeleteRoleByIdComponent
     }
 
 
