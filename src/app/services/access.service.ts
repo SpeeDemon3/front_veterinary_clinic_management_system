@@ -17,14 +17,23 @@ export class AccessService {
 
   constructor() { }
 
+
+/*
   signup(object : SignUpRequest) : Observable<UserResponse> {
     return this.http.post<UserResponse>(`${this.UrlBase}/user/signup`, object);
   }
+*/
+
+  signup(user: any): Observable<any> {
+    return this.http.post(`${this.UrlBase}/user/signup`, user);
+  }
+
 
   login(object : LoginRequest) : Observable<ResponseAccess> {
     return this.http.post<ResponseAccess>(`${this.UrlBase}/user/login`, object);
   }
 
 
-
 }
+
+

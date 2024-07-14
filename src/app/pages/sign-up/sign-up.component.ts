@@ -66,8 +66,8 @@ export class SignUpComponent {
           }
         },
         error: (err) => {
+          console.error('Sign up error:', err);
           alert(`Sign up error: ${err.message || 'Unknown error'}`);
-          console.log('Sign up error: ', err.message);
         }
       })
   }
