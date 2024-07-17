@@ -8,5 +8,4 @@ export interface UserRequestUpdate {
     phoneNumber : string;
     img : string;
     birthdate : string;
-    role : RoleRequest;
 }

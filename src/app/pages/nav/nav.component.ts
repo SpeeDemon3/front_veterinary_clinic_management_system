@@ -150,6 +150,9 @@ navigateToDeleteOwnerById() {
   this.router.navigate(['/deleteOwnerById'])
 }
 
+navigateToUpdateUserById() {
+  this.router.navigate(['/updateUserById']);
+}
 
 }
 

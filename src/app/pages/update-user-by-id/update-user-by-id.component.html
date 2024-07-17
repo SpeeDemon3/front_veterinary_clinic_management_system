@@ -1,0 +1,49 @@
+<div class="card-container">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Update User</mat-card-title>
+        </mat-card-header>
+        <mat-form-field>
+            <mat-label>Insert User ID</mat-label>
+            <input matInput (keyup)="findUserById(userId.value)" placeholder="Ex. 123" #userId>
+          </mat-form-field>
+        <mat-card-content>
+            <form class="form-custom" [formGroup]="formUpdateUser">
+                <mat-form-field class="input-custom">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" placeholder="Name...">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" placeholder="example@gmail.com">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>DNI</mat-label>
+                    <input matInput formControlName="dni" placeholder="55221155J">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Phone number</mat-label>
+                    <input matInput formControlName="phoneNumber" placeholder="+34 666554455">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Birtdathe</mat-label>
+                    <input matInput formControlName="birthdate" placeholder="dd-mm-yyyy">
+                </mat-form-field>
+
+                <div>
+                    <app-image-uploader 
+                      [image]="formUpdateUser.get('img')?.value" 
+                      (imageChange)="formUpdateUser.get('img')?.setValue($event)">
+                    </app-image-uploader>
+                    <mat-error *ngIf="formUpdateUser.get('img')?.hasError('required')" style = "font-size: 10px; color: grey">Image is required</mat-error>
+                    <mat-error *ngIf="formUpdateUser.get('img')?.hasError('invalidFormat')">Only PNG files are allowed</mat-error>
+                </div>
+
+                <div class="flex">
+                    <button mat-flat-button color="primary" (click)="updateUserById()">Update</button>
+                    <button mat-flat-button color="warn" (click)="returnHome()" style="margin-left: 9px;">Return Home</button>
+                </div>
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>

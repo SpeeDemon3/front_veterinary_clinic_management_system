@@ -36,6 +36,7 @@ import { DeleteRoleByIdComponent } from './pages/delete-role-by-id/delete-role-b
 import { DeleteAppointmentByIdComponent } from './pages/delete-appointment-by-id/delete-appointment-by-id.component';
 import { DeleteOwnerByIdComponent } from './pages/delete-owner-by-id/delete-owner-by-id.component';
 import { CreateRoleComponent } from './pages/create-role/create-role.component';
+import { UpdateUserByIdComponent } from './pages/update-user-by-id/update-user-by-id.component';
 
 export const routes: Routes = [
     {
@@ -182,6 +183,10 @@ export const routes: Routes = [
     {
       path: "deleteOwnerById",
       component: DeleteOwnerByIdComponent
+    },
+    {
+      path: "updateUserById",
+      component: UpdateUserByIdComponent
     }
 
 

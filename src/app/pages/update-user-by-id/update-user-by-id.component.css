@@ -1,0 +1,64 @@
+.card-container {
+    display: flex;
+    justify-content: center; 
+    padding: 5∞;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.form-custom {
+    min-width: 150px;
+    width: 100%;
+}
+
+.input-custom {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.flex button {
+    margin-left: 0; /* Eliminar el margen izquierdo que tenías inline */
+  }
+
+mat-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  mat-card-title {
+    font-family: Tahoma, sans-serif;
+    font-style: italic;
+    margin: 20px 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(169, 141, 222, 0.678);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra oscura al texto */
+    letter-spacing: 4px; /* Separación entre las letras */
+  }
+
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensure elements stack vertically */
+  }
+  
+  .centered-container mat-form-field {
+    margin-bottom: 20px; /* Add some space between the form field and the table */
+  }
+  
+  .centered-container input {
+    background-color: aliceblue;
+    color: rgb(40, 40, 221);
+  }
+  
+  
+
+  
