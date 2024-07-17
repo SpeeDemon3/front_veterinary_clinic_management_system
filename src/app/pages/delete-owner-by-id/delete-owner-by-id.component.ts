@@ -42,7 +42,7 @@ export class DeleteOwnerByIdComponent {
       (response) => {
         console.log('Response received from deleteById:', response);
         alert("Owner deleted successfully");
-        this.router.navigate(['/findOwnerById']);
+        this.router.navigate(['/findAllOwners']);
       },
       (error) => {
         alert("Error deleting owner");

@@ -17,7 +17,7 @@ import { PetResponse } from '../../interfaces/pet-response';
 export class FindPetByCodeComponent {
   
   private petService = inject(PetService)
-  public displayedColumns: string[] = ['identificationCode', 'name', 'veterinarian', 'description', 'vaccinationData', 'img', 'birthdate', 'medication'];
+  public displayedColumns: string[] = ['identificationCode', 'name', 'veterinarian', 'owner', 'description', 'vaccinationData', 'img', 'birthdate', 'medication'];
   public dataSource = new MatTableDataSource<PetResponse>();
 
   findPetByCode(code: string) {
