@@ -154,6 +154,14 @@ navigateToUpdateUserById() {
   this.router.navigate(['/updateUserById']);
 }
 
+navigateToUpdateRoleByID() {
+  this.router.navigate(['/updateRoleById']);
+}
+
+
+
+
+
 }
 
 

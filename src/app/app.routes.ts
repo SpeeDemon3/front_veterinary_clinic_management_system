@@ -37,6 +37,7 @@ import { DeleteAppointmentByIdComponent } from './pages/delete-appointment-by-id
 import { DeleteOwnerByIdComponent } from './pages/delete-owner-by-id/delete-owner-by-id.component';
 import { CreateRoleComponent } from './pages/create-role/create-role.component';
 import { UpdateUserByIdComponent } from './pages/update-user-by-id/update-user-by-id.component';
+import { UpdateRoleByIdComponent } from './pages/update-role-by-id/update-role-by-id.component';
 
 export const routes: Routes = [
     {
@@ -187,6 +188,10 @@ export const routes: Routes = [
     {
       path: "updateUserById",
       component: UpdateUserByIdComponent
+    },
+    {
+      path: "updateRoleById",
+      component: UpdateRoleByIdComponent
     }
 
 

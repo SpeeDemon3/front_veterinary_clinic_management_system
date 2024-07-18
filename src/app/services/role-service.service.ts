@@ -30,4 +30,8 @@ export class RoleServiceService {
     return this.http.post<RoleResponse>(`${this.UrlBase}/role/add`, request);
   }
 
+  updateRoleById(id : number, request : RoleRequest) : Observable<RoleResponse> {
+    return this.http.put<RoleResponse>(`${this.UrlBase}/role/updateById/${id}`, request);
+  }
+
 }
