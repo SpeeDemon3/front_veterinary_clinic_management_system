@@ -3,10 +3,14 @@
         <mat-card-header>
           <mat-card-title>Update User</mat-card-title>
         </mat-card-header>
-        <mat-form-field>
-            <mat-label>Insert User ID</mat-label>
-            <input matInput (keyup)="findUserById(userId.value)" placeholder="Ex. 123" #userId>
-          </mat-form-field>
+
+        <div class="centered-input">
+            <mat-form-field>
+                <mat-label>Insert User ID</mat-label>
+                <input matInput (keyup)="findUserById(userId.value)" placeholder="Ex. 123" #userId>
+              </mat-form-field>
+        </div>
+
         <mat-card-content>
             <form class="form-custom" [formGroup]="formUpdateUser">
                 <mat-form-field class="input-custom">
