@@ -1,0 +1,44 @@
+<div class="card-container">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Update Owner</mat-card-title>
+        </mat-card-header>
+
+        <div class="centered-input">
+            <mat-form-field>
+                <mat-label>Insert Owner ID</mat-label>
+                <input matInput (keyup)="findOwnerById(ownerId.value)" placeholder="Ex. 123" #ownerId>
+              </mat-form-field>
+        </div>
+
+        <mat-card-content>
+            <form class="form-custom" [formGroup]="formUpdateOwner">
+                <mat-form-field class="input-custom">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" placeholder="Name...">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName" placeholder="Name Lastname...">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" placeholder="example@gmail.com">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>DNI</mat-label>
+                    <input matInput formControlName="dni" placeholder="55221155J">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Phone number</mat-label>
+                    <input matInput formControlName="phoneNumber" placeholder="+34 666554455">
+                </mat-form-field>
+
+                <div class="flex">
+                    <button mat-flat-button color="primary" (click)="updateOwnerById()">Update</button>
+                    <button mat-flat-button color="warn" (click)="returnHome()" style="margin-left: 9px;">Return Home</button>
+                </div>
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>

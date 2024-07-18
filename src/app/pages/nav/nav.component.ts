@@ -158,6 +158,10 @@ navigateToUpdateRoleByID() {
   this.router.navigate(['/updateRoleById']);
 }
 
+navigateToUpdateOwnerById() {
+  this.router.navigate(['/updateOwnerById']);
+}
+
 
 
 

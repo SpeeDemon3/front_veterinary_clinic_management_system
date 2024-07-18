@@ -38,6 +38,7 @@ import { DeleteOwnerByIdComponent } from './pages/delete-owner-by-id/delete-owne
 import { CreateRoleComponent } from './pages/create-role/create-role.component';
 import { UpdateUserByIdComponent } from './pages/update-user-by-id/update-user-by-id.component';
 import { UpdateRoleByIdComponent } from './pages/update-role-by-id/update-role-by-id.component';
+import { UpdateOwnerByIdComponent } from './pages/update-owner-by-id/update-owner-by-id.component';
 
 export const routes: Routes = [
     {
@@ -192,6 +193,10 @@ export const routes: Routes = [
     {
       path: "updateRoleById",
       component: UpdateRoleByIdComponent
+    },
+    {
+      path: "updateOwnerById",
+      component: UpdateOwnerByIdComponent
     }
 
 
