@@ -4,6 +4,7 @@ import { appsettings } from '../settings/appsettings';
 import { Observable } from 'rxjs';
 import { AppointmentResponse } from '../interfaces/appointment-response';
 import { AppointmentRequest } from '../interfaces/appointment-request';
+import { AppointmentRequestUpdate } from '../interfaces/appointment-request-update';
 
 @Injectable({
   providedIn: 'root'
@@ -41,6 +42,10 @@ export class AppointmentService {
 
   deleteAppointmentById(id : number) : Observable<boolean> {
     return this.http.delete<boolean>(`${this.UrlBase}/appointment/deleteById/${id}`);
+  }
+
+  updateAppointmentById(id: number, appointment: AppointmentRequestUpdate): Observable<AppointmentResponse> {
+    return this.http.put<AppointmentResponse>(`${this.UrlBase}/appointment/updateById/${id}`, appointment)
   }
   
 }

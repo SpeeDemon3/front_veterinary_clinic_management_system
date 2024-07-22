@@ -170,7 +170,9 @@ navigateToUpdateInvoiceById() {
   this.router.navigate(['/updateInvoiceById']);
 }
 
-
+navigateToUpdateAppointmentById() {
+  this.router.navigate(['/updateAppointmentById']);
+}
 
 
 

@@ -1,0 +1,36 @@
+<div class="card-container">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Update Appointment</mat-card-title>
+        </mat-card-header>
+
+        <div class="centered-input">
+            <mat-form-field>
+                <mat-label>Insert Appointment ID</mat-label>
+                <input matInput (keyup)="findAppointmentById(appointmentId.value)" placeholder="Ex. 123" #appointmentId>
+              </mat-form-field>
+        </div>
+
+        <mat-card-content>
+            <form class="form-custom" [formGroup]="formUpdateAppointment">
+                <mat-form-field class="input-custom">
+                    <mat-label>Date Of Appointment</mat-label>
+                    <input matInput formControlName="dateOfAppointment" placeholder="dd-mm-yyyy">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Appointment Time</mat-label>
+                    <input matInput formControlName="appointmentTime" placeholder="10:00 a.m or 17:00 p.m">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Description</mat-label>
+                    <input matInput formControlName="description" placeholder="Description of appointment...">
+                </mat-form-field>
+
+                <div class="flex">
+                    <button mat-flat-button color="primary" (click)="updateAppointmentById()">Update</button>
+                    <button mat-flat-button color="warn" (click)="returnHome()" style="margin-left: 9px;">Return Home</button>
+                </div>
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>
