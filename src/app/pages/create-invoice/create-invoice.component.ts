@@ -71,10 +71,10 @@ export class CreateInvoiceComponent {
 
   }
 
-  toUpperCase(fileName: string): any {
+  toLowerCasse(fileName: string): any {
     const value = this.formCreateInvoice.get(fileName)?.value;
     if (value) {
-      this.formCreateInvoice.get(fileName)?.setValue(value.toUpperCase());
+      this.formCreateInvoice.get(fileName)?.setValue(value.toLowerCasse);
     }  }
 
 }

@@ -166,6 +166,10 @@ navigateToUpdatePetById() {
   this.router.navigate(['/updatePetById']);
 }
 
+navigateToUpdateInvoiceById() {
+  this.router.navigate(['/updateInvoiceById']);
+}
+
 
 
 

@@ -32,12 +32,16 @@ export class InvoiceService {
     return this.http.get<InvoiceResponse[]>(`${this.UrlBase}/invoice/findByState/${state}`);
   }
 
-  createInvoice(dniOwner : string, invoiceRequest : InvoiceRequest) : Observable<InvoiceRequest> {
-    return this.http.post<InvoiceRequest>(`${this.UrlBase}/invoice/add/${dniOwner}`, invoiceRequest);
+  createInvoice(dniOwner : string, invoiceRequest : InvoiceRequest) : Observable<InvoiceResponse> {
+    return this.http.post<InvoiceResponse>(`${this.UrlBase}/invoice/add/${dniOwner}`, invoiceRequest);
   }
 
   deleteById(id : number) : Observable<boolean> {
     return this.http.delete<boolean>(`${this.UrlBase}/invoice/deleteById/${id}`);
+  }
+
+  updateInvoice(id : number, invoiceRequest : InvoiceRequest) : Observable<InvoiceResponse> {
+    return this.http.put<InvoiceResponse>(`${this.UrlBase}/invoice/updateById/${id}`, invoiceRequest);
   }
 
 

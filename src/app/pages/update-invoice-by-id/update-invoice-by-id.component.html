@@ -1,0 +1,36 @@
+<div class="card-container">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Update Invoice</mat-card-title>
+        </mat-card-header>
+
+        <div class="centered-input">
+            <mat-form-field>
+                <mat-label>Insert Invoice ID</mat-label>
+                <input matInput (keyup)="findInvoiceById(invoiceID.value)" placeholder="Ex. 123" #invoiceID>
+              </mat-form-field>
+        </div>
+
+        <mat-card-content>
+            <form class="form-custom" [formGroup]="formUpdateInvoice">
+                <mat-form-field class="input-custom">
+                    <mat-label>Invoice Number</mat-label>
+                    <input matInput formControlName="invoiceNumber" placeholder="123...">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Total Price</mat-label>
+                    <input matInput formControlName="totalPrice" placeholder="130,03€">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>State</mat-label>
+                    <input matInput formControlName="state" placeholder="Invoice paid or unpaid.">
+                </mat-form-field>
+
+                <div class="flex">
+                    <button mat-flat-button color="primary" (click)="updateInvoiceById()">Update</button>
+                    <button mat-flat-button color="warn" (click)="returnHome()" style="margin-left: 9px;">Return Home</button>
+                </div>
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>
