@@ -1,10 +1,11 @@
 import { OwnerRequest } from "./owner-request";
 import { OwnerResponse } from "./owner-response";
 import { UserRequestUpdate } from "./user-request-update";
+import { UserResponse } from "./user-response";
 
 export interface PetRequestUpdate {
-    veterinarian : UserRequestUpdate;
-    owner: OwnerRequest;
+    veterinarian : UserResponse;
+    owner: UserResponse;
     identificationCode : string;
     name : string;
     description : string;

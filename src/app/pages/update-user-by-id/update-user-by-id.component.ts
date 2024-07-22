@@ -80,7 +80,6 @@ export class UpdateUserByIdComponent {
       birthdate: this.formUpdateUser.value.birthdate,
     }
 
-
     console.log('Attempting to update with object:', object);
 
     this.userService.updateById(this.userId, object as UserRequestUpdate).subscribe(
@@ -96,7 +95,7 @@ export class UpdateUserByIdComponent {
           console.error('Update error:', err);
           alert(`Update error: ${err.message || 'Unknown error'}`);
         }
-      })
+      });
   }
   
   returnHome() {

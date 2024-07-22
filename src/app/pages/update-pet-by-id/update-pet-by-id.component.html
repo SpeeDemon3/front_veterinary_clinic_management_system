@@ -1,0 +1,69 @@
+<div class="card-container">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Update Pet</mat-card-title>
+        </mat-card-header>
+
+        <div class="centered-input">
+            <mat-form-field>
+                <mat-label>Insert Pet ID</mat-label>
+                <input matInput (keyup)="findPetById(petId.value)" placeholder="Ex. 123" #petId>
+              </mat-form-field>
+        </div>
+
+        <mat-card-content>
+            <form class="form-custom" [formGroup]="formUpdatePet">
+                <!--
+                <mat-form-field class="input-custom">
+                    <mat-form-field class="input-custom">
+                        <mat-label>Veterinarian ID</mat-label>
+                        <input matInput formControlName="veterinarian" placeholder="Veterinarian ID">
+                    </mat-form-field>
+                    <mat-form-field class="input-custom">
+                        <mat-label>Owner ID</mat-label>
+                        <input matInput formControlName="owner" placeholder="Owner ID">
+                    </mat-form-field>
+                </mat-form-field>
+                -->
+                <mat-form-field class="input-custom">
+                    <mat-label>Identification Code</mat-label>
+                    <input matInput formControlName="identificationCode" placeholder="Ex. A12M1C">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" placeholder="Name...">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Description</mat-label>
+                    <input matInput formControlName="description" placeholder="Description...">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Vaccination Data</mat-label>
+                    <input matInput formControlName="vaccinationData" placeholder="Animal vaccination dates...">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Birtdathe</mat-label>
+                    <input matInput formControlName="birthdate" placeholder="dd-mm-yyyy">
+                </mat-form-field>
+                <mat-form-field class="input-custom">
+                    <mat-label>Medication</mat-label>
+                    <input matInput formControlName="medication" placeholder="Animal medication...">
+                </mat-form-field>
+
+                <div>
+                    <app-image-uploader 
+                      [image]="formUpdatePet.get('img')?.value" 
+                      (imageChange)="formUpdatePet.get('img')?.setValue($event)">
+                    </app-image-uploader>
+                    <mat-error *ngIf="formUpdatePet.get('img')?.hasError('required')" style = "font-size: 10px; color: grey">Image is required</mat-error>
+                    <mat-error *ngIf="formUpdatePet.get('img')?.hasError('invalidFormat')">Only PNG files are allowed</mat-error>
+                </div>
+
+                <div class="flex">
+                    <button mat-flat-button color="primary" (click)="updatePetById()">Update</button>
+                    <button mat-flat-button color="warn" (click)="returnHome()" style="margin-left: 9px;">Return Home</button>
+                </div>
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>

@@ -6,7 +6,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Router } from '@angular/router';
-import { last } from 'rxjs';
 import { ImageUploaderComponent } from '../../image-uploader/image-uploader.component';
 import { OwnerRequest } from '../../interfaces/owner-request';
 import { OwnerResponse } from '../../interfaces/owner-response';
@@ -60,6 +59,7 @@ export class UpdateOwnerByIdComponent {
   }
 
   updateOwnerById() {
+    
     if (this.formUpdateOwner.invalid) {
       return;
     }
@@ -72,7 +72,7 @@ export class UpdateOwnerByIdComponent {
       lastName: this.formUpdateOwner.value.lastName,
       email: this.formUpdateOwner.value.email,
       dni: this.formUpdateOwner.value.dni,
-      phoneNumber: this.formUpdateOwner.value.phoneNumber
+      phoneNumber: this.formUpdateOwner.value.phoneNumber,
     }
     console.log('Attempting to update with object:', object);
 

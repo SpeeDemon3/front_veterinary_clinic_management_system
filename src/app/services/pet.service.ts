@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { PetResponse } from '../interfaces/pet-response';
 import { appsettings } from '../settings/appsettings';
 import { PetRequest } from '../interfaces/pet-request';
+import { PetRequestUpdate } from '../interfaces/pet-request-update';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +34,10 @@ export class PetService {
 
   deletePetById(id : number) {
     return this.http.delete<boolean>(`${this.UrlBase}/pet/deleteById/${id}`);
+  }
+
+  updatePetById(id : number, pet : PetRequestUpdate) : Observable<PetResponse> {
+    return this.http.put<PetResponse>(`${this.UrlBase}/pet/updateById/${id}`, pet);
   }
 
 }

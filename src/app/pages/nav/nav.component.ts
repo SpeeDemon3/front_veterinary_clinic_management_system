@@ -162,6 +162,10 @@ navigateToUpdateOwnerById() {
   this.router.navigate(['/updateOwnerById']);
 }
 
+navigateToUpdatePetById() {
+  this.router.navigate(['/updatePetById']);
+}
+
 
 
 
