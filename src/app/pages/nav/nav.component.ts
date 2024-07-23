@@ -178,6 +178,9 @@ navigateToDownloadCsvUser() {
   this.router.navigate(['/downloadCsvUser']);
 }
 
+navigateToDownloadCsvOwner() {
+  this.router.navigate(['/downloadCsvOwner']);
+}
 
 }
 
