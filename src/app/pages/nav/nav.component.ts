@@ -190,7 +190,9 @@ navigateToDownloadCsvInvoice() {
   this.router.navigate(['/downloadCsvInvoice']);
 }
 
-
+navigateToDownloadCsvAppointment() {
+  this.router.navigate(['/downloadCsvAppointment']);
+}
 
 }
 

@@ -47,5 +47,9 @@ export class AppointmentService {
   updateAppointmentById(id: number, appointment: AppointmentRequestUpdate): Observable<AppointmentResponse> {
     return this.http.put<AppointmentResponse>(`${this.UrlBase}/appointment/updateById/${id}`, appointment)
   }
+
+  downloadFileCsvAppointments(): Observable<Blob> {
+    return this.http.get(`${this.UrlBase}/appointment/appointmentInfoDownloadCsv`, { responseType: 'blob' });
+  }
   
 }
