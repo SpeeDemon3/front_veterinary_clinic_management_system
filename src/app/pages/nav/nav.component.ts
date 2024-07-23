@@ -184,10 +184,11 @@ navigateToDownloadCsvOwner() {
 
 navigateToDownloadCsvPet() {
   this.router.navigate(['/downloadCsvPet']);
-
 }
 
-
+navigateToDownloadCsvInvoice() {
+  this.router.navigate(['/downloadCsvInvoice']);
+}
 
 
 

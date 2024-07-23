@@ -45,6 +45,7 @@ import { UpdateAppointmentByIdComponent } from './pages/update-appointment-by-id
 import { DownloadCsvUserComponent } from './pages/download-csv-user/download-csv-user.component';
 import { DownloadCsvOwnerComponent } from './pages/download-csv-owner/download-csv-owner.component';
 import { DownloadCsvPetComponent } from './pages/download-csv-pet/download-csv-pet.component';
+import { DownloadCsvInvoiceComponent } from './pages/download-csv-invoice/download-csv-invoice.component';
 
 export const routes: Routes = [
     {
@@ -227,6 +228,10 @@ export const routes: Routes = [
     {
       path: "downloadCsvPet",
       component: DownloadCsvPetComponent
+    },
+    {
+      path: "downloadCsvInvoice",
+      component: DownloadCsvInvoiceComponent
     }
 
 

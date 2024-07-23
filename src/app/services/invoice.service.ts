@@ -44,5 +44,9 @@ export class InvoiceService {
     return this.http.put<InvoiceResponse>(`${this.UrlBase}/invoice/updateById/${id}`, invoiceRequest);
   }
 
+  downloadFileCsvInvoice(): Observable<Blob> {
+    return this.http.get(`${this.UrlBase}/invoice/downloadFileCsvInvoices`, { responseType: 'blob' });
+  }
+
 
 }

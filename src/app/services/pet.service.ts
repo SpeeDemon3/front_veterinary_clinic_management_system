@@ -40,7 +40,7 @@ export class PetService {
     return this.http.put<PetResponse>(`${this.UrlBase}/pet/updateById/${id}`, pet);
   }
 
-  downloadFileCsvUsers(): Observable<Blob> {
+  downloadFileCsvPets(): Observable<Blob> {
     return this.http.get(`${this.UrlBase}/pet/downloadFileCsvPets`, { responseType: 'blob' });
   }
 
