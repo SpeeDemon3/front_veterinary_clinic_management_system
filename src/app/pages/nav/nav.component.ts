@@ -174,6 +174,9 @@ navigateToUpdateAppointmentById() {
   this.router.navigate(['/updateAppointmentById']);
 }
 
+navigateToDownloadCsvUser() {
+  this.router.navigate(['/downloadCsvUser']);
+}
 
 
 }

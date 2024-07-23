@@ -35,4 +35,8 @@ export class UserService {
     return this.http.delete<boolean>(`${this.UrlBase}/user/deleteById/${id}`);
   }
 
+  downloadFileCsvUsers(): Observable<Blob> {
+    return this.http.get(`${this.UrlBase}/user/downloadFileCsvUsers`, { responseType: 'blob' });
+  }
+
 }

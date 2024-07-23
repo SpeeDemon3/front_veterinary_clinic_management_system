@@ -42,6 +42,7 @@ import { UpdateOwnerByIdComponent } from './pages/update-owner-by-id/update-owne
 import { UpdatePetByIdComponent } from './pages/update-pet-by-id/update-pet-by-id.component';
 import { UpdateInvoiceByIdComponent } from './pages/update-invoice-by-id/update-invoice-by-id.component';
 import { UpdateAppointmentByIdComponent } from './pages/update-appointment-by-id/update-appointment-by-id.component';
+import { DownloadCsvUserComponent } from './pages/download-csv-user/download-csv-user.component';
 
 export const routes: Routes = [
     {
@@ -212,8 +213,11 @@ export const routes: Routes = [
     {
       path: "updateAppointmentById",
       component: UpdateAppointmentByIdComponent
+    },
+    {
+      path: "downloadCsvUser",
+      component: DownloadCsvUserComponent
     }
-
 
 
 ];
