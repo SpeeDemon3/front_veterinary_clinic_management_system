@@ -39,4 +39,8 @@ export class UserService {
     return this.http.get(`${this.UrlBase}/user/downloadFileCsvUsers`, { responseType: 'blob' });
   }
 
+  downloadFileJsonUsers(): Observable<Blob> {
+    return this.http.get(`${this.UrlBase}/user/downloadFileJsonUsers`, { responseType: 'blob' });
+  }
+
 }

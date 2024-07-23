@@ -8,7 +8,7 @@
   border-radius: 5px; /* Bordes redondeados */
   border: none; /* Sin borde */
   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  transition: background-color 0.5s ease; /* Transición suave al cambiar el color de fondo */
+  transition: background-color 0.5s ease, color 0.5s ease, text-shadow 0.5s ease; /* Transición suave al cambiar el color de fondo */
   margin-left: 2%;
 }
 
@@ -16,12 +16,12 @@
   background-color: #2681dc; /* Color de fondo al pasar el ratón */
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra oscura al texto */
-  transition: ease 0.5s;
+  /*transition: ease 0.5s;*/
 }
 
 .custom-management-button:active {
   background-color: #5486d0; /* Color de fondo al hacer clic */
-  transition: ease 1.5s;
+  transition: background-color 1.5s ease; /* Transición más lenta al hacer clic */
 }
 
 /* Estilo para el menú en general */
@@ -53,6 +53,7 @@
   color: red;
   letter-spacing: 4px;
   background-color: white;
+  transition: color 1s ease, background-color 1s ease, border-color 1s ease;
 }
 
 #exit-button:hover {

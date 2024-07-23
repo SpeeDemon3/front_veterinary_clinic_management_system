@@ -194,6 +194,10 @@ navigateToDownloadCsvAppointment() {
   this.router.navigate(['/downloadCsvAppointment']);
 }
 
+navigateToDownloadJsonUser() {
+  this.router.navigate(['/downloadJsonUser']);
+}
+
 }
 
 
