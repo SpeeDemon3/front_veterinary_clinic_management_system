@@ -50,6 +50,7 @@ import { DownloadCsvAppointmentComponent } from './pages/download-csv-appointmen
 import { DownloadJsonUserComponent } from './pages/download-json-user/download-json-user.component';
 import { DownloadJsonOwnerComponent } from './pages/download-json-owner/download-json-owner.component';
 import { DownloadJsonPetComponent } from './pages/download-json-pet/download-json-pet.component';
+import { DownloadJsonInvoiceComponent } from './pages/download-json-invoice/download-json-invoice.component';
 
 export const routes: Routes = [
     {
@@ -252,6 +253,10 @@ export const routes: Routes = [
     {
       path: "downloadJsonPet",
       component: DownloadJsonPetComponent
+    },
+    {
+      path: "downloadJsonInvoice",
+      component: DownloadJsonInvoiceComponent
     }
 
 

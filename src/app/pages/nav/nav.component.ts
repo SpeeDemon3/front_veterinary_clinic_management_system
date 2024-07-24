@@ -206,6 +206,10 @@ navigateToDownloadJsonPet() {
   this.router.navigate(['/downloadJsonPet']);
 }
 
+navigateToDownloadJsonInvoice() {
+  this.router.navigate(['/downloadJsonInvoice']);
+}
+
 }
 
 
