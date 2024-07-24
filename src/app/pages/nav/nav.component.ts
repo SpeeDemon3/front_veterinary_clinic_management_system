@@ -202,6 +202,10 @@ navigateToDownloadJsonOwner() {
   this.router.navigate(['/downloadJsonOwner']);
 }
 
+navigateToDownloadJsonPet() {
+  this.router.navigate(['/downloadJsonPet']);
+}
+
 }
 
 

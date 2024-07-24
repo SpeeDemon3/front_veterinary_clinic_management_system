@@ -1,0 +1,64 @@
+
+.card-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 100px;
+}
+
+mat-card {
+  margin: 20px;
+  text-align: center;
+  background-color: rgb(252, 252, 252);
+  transition: background-color 2s ease, color 1s ease, border 1s ease, text-shadow 1s ease;
+}
+
+mat-card:hover {
+  background-color: black;
+  color: azure;
+  border: solid 1px rgba(0, 255, 123, 0.899);
+  transition: ease 1s;
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra oscura al texto */
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+mat-card-title {
+  font-family: sans-serif;
+  font-style: italic;
+  margin: 8px auto;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: rgba(15, 236, 148, 0.788);
+  text-shadow: 2px 2px 4px rgba(17, 14, 181, 0.561); /* Sombra oscura al texto */
+  letter-spacing: 4px; /* Separación entre las letras */
+  transition: color 1s ease, text-shadow 1s ease; /* Smooth transition for both color and text-shadow */
+}
+
+mat-card-title:hover {
+  transition: ease 1s;
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(252, 251, 251, 0.793); /* Sombra oscura al texto */
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espacio entre los botones */
+}
+
+.flex button {
+  margin-left: 0; /* Eliminar el margen izquierdo que tenías inline */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.flex button:hover {
+  transform: translateY(-5px); /* Move the button upwards when hovered */
+}

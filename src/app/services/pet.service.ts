@@ -44,4 +44,8 @@ export class PetService {
     return this.http.get(`${this.UrlBase}/pet/downloadFileCsvPets`, { responseType: 'blob' });
   }
 
+  downloadJsonPet(): Observable<Blob> {
+    return this.http.get(`${this.UrlBase}/pet/downloadFileJsonPets`, { responseType: 'blob' });
+  }
+
 }
