@@ -30,9 +30,9 @@ export class SignUpComponent {
   public formSignUp: FormGroup = this.formBuild.group({
     name: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required],
+    password: ['', [Validators.required, Validators.minLength(8)]],
     dni: ['', [Validators.required, Validators.pattern(/^\d{8}[A-Z]$/)]],
-    phoneNumber: ['', Validators.required],
+    phoneNumber: ['', [Validators.required, Validators.minLength(9)]],
     img: [null, Validators.required],
     birthdate: ['', [Validators.required, this.dateValidator]]
   })
