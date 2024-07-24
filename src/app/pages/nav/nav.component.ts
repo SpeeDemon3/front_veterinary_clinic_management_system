@@ -210,6 +210,10 @@ navigateToDownloadJsonInvoice() {
   this.router.navigate(['/downloadJsonInvoice']);
 }
 
+navigateToDownloadJsonAppointment() {
+  this.router.navigate(['/downloadJsonAppointment']);
+}
+
 }
 
 

@@ -51,6 +51,7 @@ import { DownloadJsonUserComponent } from './pages/download-json-user/download-j
 import { DownloadJsonOwnerComponent } from './pages/download-json-owner/download-json-owner.component';
 import { DownloadJsonPetComponent } from './pages/download-json-pet/download-json-pet.component';
 import { DownloadJsonInvoiceComponent } from './pages/download-json-invoice/download-json-invoice.component';
+import { DownloadJsonAppointmentComponent } from './pages/download-json-appointment/download-json-appointment.component';
 
 export const routes: Routes = [
     {
@@ -257,6 +258,10 @@ export const routes: Routes = [
     {
       path: "downloadJsonInvoice",
       component: DownloadJsonInvoiceComponent
+    },
+    {
+      path: "downloadJsonAppointment",
+      component: DownloadJsonAppointmentComponent
     }
 
 

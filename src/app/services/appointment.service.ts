@@ -51,5 +51,9 @@ export class AppointmentService {
   downloadFileCsvAppointments(): Observable<Blob> {
     return this.http.get(`${this.UrlBase}/appointment/appointmentInfoDownloadCsv`, { responseType: 'blob' });
   }
+
+  downloadFileJsonAppointment(): Observable<Blob> {
+    return this.http.get(`${this.UrlBase}/appointment/appointmentInfoDownloadJson`, { responseType: 'blob' });
+  }
   
 }
