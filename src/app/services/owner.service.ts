@@ -47,4 +47,8 @@ export class OwnerService {
     return this.http.get(`${this.UrlBase}/owner/downloadInfoFileCsv`, { responseType: 'blob' });
   }
 
+  downloadJsonOwner(): Observable<Blob> {
+    return this.http.get(`${this.UrlBase}/owner/downloadInfoFileJson`, { responseType: 'blob' });
+  }
+
 }

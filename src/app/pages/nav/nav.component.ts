@@ -198,6 +198,10 @@ navigateToDownloadJsonUser() {
   this.router.navigate(['/downloadJsonUser']);
 }
 
+navigateToDownloadJsonOwner() {
+  this.router.navigate(['/downloadJsonOwner']);
+}
+
 }
 
 
