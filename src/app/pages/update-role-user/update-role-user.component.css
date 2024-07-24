@@ -1,0 +1,71 @@
+.card-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 100px;
+}
+
+.form-custom {
+    min-width: 150px;
+    width: 100%;
+}
+
+.input-custom {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.flex button {
+    margin-left: 0; /* Eliminar el margen izquierdo que tenías inline */
+}
+
+mat-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card-title {
+    font-family: Tahoma;
+    margin: 40px 20px;
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+    color: rgb(67, 87, 239);
+    text-shadow: 2px 2px 4px rgba(15, 4, 3, 0.457); /* Sombra oscura al texto */
+    letter-spacing: 4px; /* Separación entre las letras */
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensure elements stack vertically */
+}
+
+.centered-container mat-form-field {
+    margin-bottom: 20px; /* Add some space between the form field and the table */
+}
+
+.centered-container input {
+    background-color: aliceblue;
+    color: rgb(60, 81, 238);
+    text-align: center; /* Center text inside input fields */
+}
+
+.centered-input {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.centered-input mat-form-field {
+    width: 50%; /* Ajusta el ancho al 50% del contenedor padre */
+}
+
+  

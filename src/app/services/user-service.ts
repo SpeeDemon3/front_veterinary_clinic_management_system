@@ -43,4 +43,8 @@ export class UserService {
     return this.http.get(`${this.UrlBase}/user/downloadFileJsonUsers`, { responseType: 'blob' });
   }
 
+  updateRoleUser(dni: string, role: number): Observable<UserResponse> {
+    return this.http.put<UserResponse>(`${this.UrlBase}/user/updateRoleUser/${dni}/${role}`, null)
+  }
+
 }

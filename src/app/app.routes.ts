@@ -52,6 +52,7 @@ import { DownloadJsonOwnerComponent } from './pages/download-json-owner/download
 import { DownloadJsonPetComponent } from './pages/download-json-pet/download-json-pet.component';
 import { DownloadJsonInvoiceComponent } from './pages/download-json-invoice/download-json-invoice.component';
 import { DownloadJsonAppointmentComponent } from './pages/download-json-appointment/download-json-appointment.component';
+import { UpdateRoleUserComponent } from './pages/update-role-user/update-role-user.component';
 
 export const routes: Routes = [
     {
@@ -262,6 +263,10 @@ export const routes: Routes = [
     {
       path: "downloadJsonAppointment",
       component: DownloadJsonAppointmentComponent
+    },
+    {
+      path: "updateRoleUser",
+      component: UpdateRoleUserComponent
     }
 
 

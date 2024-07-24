@@ -214,6 +214,10 @@ navigateToDownloadJsonAppointment() {
   this.router.navigate(['/downloadJsonAppointment']);
 }
 
+navigateToUpdateRoleUser() {
+  this.router.navigate(['/updateRoleUser'])
+}
+
 }
 
 

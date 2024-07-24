@@ -1,0 +1,21 @@
+<app-header/>
+<app-nav/>
+
+<div class="card-container">
+    <mat-card class="outlined">
+        <mat-card-header>
+            <mat-card-title>Update User Role</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="centered-container" [formGroup]="updateRoleForm" (ngSubmit)="updateRole()">
+                <mat-form-field class="centered-input">
+                    <input matInput formControlName="dni" required placeholder="Insert user dni">
+                </mat-form-field>
+                <mat-form-field class="centered-input">
+                    <input matInput formControlName="idRole" required placeholder="Insert new role ID">
+                </mat-form-field>
+                <button mat-raised-button color="primary" type="submit">Update Role</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
