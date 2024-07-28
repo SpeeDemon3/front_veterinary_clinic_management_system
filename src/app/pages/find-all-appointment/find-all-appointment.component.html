@@ -38,7 +38,7 @@
                 
                   <ng-container matColumnDef="veterinarian">
                     <th mat-header-cell *matHeaderCellDef> Veterinarian Name </th>
-                    <td mat-cell *matCellDef="let element"> {{element.veterinarian.name}} </td>
+                    <td mat-cell *matCellDef="let element"> {{element.veterinarian?.name}} </td>
                   </ng-container>
 
                   <ng-container matColumnDef="pet">

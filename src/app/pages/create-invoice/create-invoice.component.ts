@@ -27,7 +27,7 @@ export class CreateInvoiceComponent {
     dniOwner: ['', [Validators.required, Validators.pattern(/^\d{8}[A-Z]$/)]],
     invoiceNumber: ['', Validators.required],
     totalPrice: ['', Validators.required],
-    state: ['', Validators.required]
+    state: ['', [Validators.required, this.stateValidator]]
   })
 
   createInvoice() {
@@ -65,16 +65,10 @@ export class CreateInvoiceComponent {
 
   stateValidator(): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
-      const validStates = ['paid', 'unpaid'];
+      const validStates = ['paid', 'unpaid', 'PAID', 'UNPAID'];
       return validStates.includes(control.value) ? null : { invalidState: true };
     };
 
   }
-
-  toLowerCasse(fileName: string): any {
-    const value = this.formCreateInvoice.get(fileName)?.value;
-    if (value) {
-      this.formCreateInvoice.get(fileName)?.setValue(value.toLowerCasse);
-    }  }
 
 }

@@ -54,6 +54,7 @@
   letter-spacing: 4px;
   background-color: white;
   transition: color 1s ease, background-color 1s ease, border-color 1s ease;
+  margin: 2%;
 }
 
 #exit-button:hover {
@@ -62,4 +63,5 @@
   border: solid 1px;
   border-color: red;
   transition: ease 1s;
+  margin: 2%;
 }
